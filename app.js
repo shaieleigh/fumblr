@@ -35,6 +35,10 @@ app.use(
 
 app.use(routes);
 
+app.get('/', (req, res) => {
+  res.send('My Home Page');
+});
+
 // Serve React Application
 // This should come after routes, but before 404 and error handling.
 if (process.env.NODE_ENV === "production") {
@@ -50,9 +54,9 @@ if (process.env.NODE_ENV === "production") {
 }
 
 
-app.use(function(_req, _res, next) {
-  next(createError(404));
-});
+// app.use(function(_req, _res, next) {
+//   next(createError(404));
+// });
 
 app.use((err, _req, _res, next) => {
   // check if error is a Sequelize error:
