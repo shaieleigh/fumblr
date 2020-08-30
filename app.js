@@ -54,9 +54,9 @@ if (process.env.NODE_ENV === "production") {
 }
 
 
-// app.use(function(_req, _res, next) {
-//   next(createError(404));
-// });
+app.use(function(_req, _res, next) {
+  next(createError(404));
+});
 
 app.use((err, _req, _res, next) => {
   // check if error is a Sequelize error:
