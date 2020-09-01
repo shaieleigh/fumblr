@@ -1,9 +1,24 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import { CssBaseline } from '@material-ui/core';
+import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
+
 import Pages from './pages/Pages';
 import { setUser } from './store/auth';
 import { useDispatch } from 'react-redux';
+
+const theme = createMuiTheme({
+  overrides: {
+    MuiCssBaseline: {
+      '@global': {
+        body: {
+          backgroundColor: 'rgb(21, 32, 43)',
+          color: 'white'
+        }
+      }
+    }
+  }
+});
 
 
 function App() {
@@ -26,12 +41,12 @@ function App() {
   if (loading) return null;
 
   return (
-    <>
+    <ThemeProvider theme={theme}>
       <CssBaseline />
       <BrowserRouter>
           <Pages />
       </BrowserRouter>
-    </>
+    </ThemeProvider>
   );
 }
 
