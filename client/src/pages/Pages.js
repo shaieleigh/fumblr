@@ -1,12 +1,17 @@
 import React from 'react';
 import { Route } from 'react-router-dom';
 import LoginPage from './LoginPage';
+import { Switch } from 'react-router-dom';
+
 
 export default function Pages() {
   return (
     <>
-    {/* <Route path="/"><h1>My Home Page</h1></Route> */}
+    <Switch>
     <Route  path='/login' component={LoginPage} />
+    <Route path="/"><h1>My Home Page</h1></Route>
+    {/* <Route path='/signup' componetn={SignUp} /> */}
+    </Switch>
     </>
   )
 }
