@@ -2,9 +2,6 @@ import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { login } from '../store/auth';
 import { Redirect, Link } from 'react-router-dom';
-import { Container, colors } from '@material-ui/core';
-import AuthSubmitButton from '../components/auth/AuthSubmitButton';
-import AuthTextField from '../components/auth/AuthTextField';
 import './loginPage.css';
 
 
