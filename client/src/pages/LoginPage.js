@@ -21,7 +21,7 @@ export default function LoginPage() {
   if (currentUserId) return <Redirect to='/' />;
 
   return (
-    <>
+    <div className='gothGirl'>
       <nav>
         <div className='logo'>f</div>
         <Link to='/signup' className='signup'>Sign up</Link>
@@ -45,6 +45,6 @@ export default function LoginPage() {
           <button className='loginSignup'>Log in</button>
         </form>
       </div>
-    </>
+    </div>
   )
 }
