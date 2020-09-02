@@ -12,7 +12,6 @@ export default function LoginPage() {
   const [password, setPassword] = useState('');
   const currentUserId = useSelector(state => state.auth.id)
   const dispatch = useDispatch();
-
   const handleSubmit = e => {
     e.preventDefault();
     dispatch(login(username, password))

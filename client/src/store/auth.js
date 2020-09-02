@@ -39,10 +39,11 @@ export const signup = (username, password, email) => {
       },
       body: JSON.stringify({username, password, email})
     });
-    const data = await res.json();
+    res.data = await res.json();
     if(res.ok) {
-      console.log(data)
+      dispatch(setUser(res.data.user))
     }
+    return res;
   }
 }
 

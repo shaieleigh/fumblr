@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { signup, login } from '../store/auth';
+import { signup } from '../store/auth';
 import { Redirect, Link } from 'react-router-dom';
 import './signup.css';
 
@@ -14,7 +14,6 @@ export default function SignUp() {
   const handleSubmit = e => {
     e.preventDefault();
     dispatch(signup(username, password, email))
-    dispatch(login(username, password))
   }
 
   if (currentUserId) return <Redirect to='/' />;
