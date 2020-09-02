@@ -31,7 +31,7 @@ export const login = (username, password) => {
 export const signup = (username, password, email) => {
   return async dispatch => {
     const csrfToken = Cookies.get('XSRF-TOKEN');
-    const res = await fetch('/api/users', {
+    const res = await fetch('/api/users/', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
