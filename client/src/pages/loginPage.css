@@ -52,11 +52,15 @@ input {
   height: 50px;
   min-width: 300px;
   margin: 0, auto;
-  border: .5px solid lightgray;
+  border: .5px solid rgb(231, 231, 231);
   box-sizing: border-box;
   padding-left: 10px;
   font-size: 16px;
   color: rgb(68, 67, 67);
+}
+
+::placeholder {
+  color: rgb(167, 167, 167)
 }
 
 input:focus{
