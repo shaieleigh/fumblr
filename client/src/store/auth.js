@@ -28,6 +28,25 @@ export const login = (username, password) => {
   };
 };
 
+export const signup = (username, password, email) => {
+  return async dispatch => {
+    const csrfToken = Cookies.get('XSRF-TOKEN');
+    const res = await fetch('/api/users/', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'XSRF-TOKEN': csrfToken,
+      },
+      body: JSON.stringify({username, password, email})
+    });
+    res.data = await res.json();
+    if(res.ok) {
+      dispatch(setUser(res.data.user))
+    }
+    return res;
+  }
+}
+
 
 export default function authReducer(state={}, action) {
   switch (action.type){
