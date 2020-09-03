@@ -29,7 +29,7 @@ export default function LoginPage() {
         <div className='logo'>f</div>
         <Link to='/signup' className='signup'>Sign up</Link>
       </nav>
-      <div>
+      <div className='loginBox'>
         <h1>fumblr</h1>
         <form onSubmit={handleSubmit}>
           <input
