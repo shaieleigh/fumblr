@@ -54,7 +54,7 @@ export default function LoginPage() {
             <path d="M6.94 7.44l4.95-2.83-2.83 4.95-4.949 2.83 2.828-4.95z" />
           </svg></Link>
           <Link to='/' className='textDecoration'>
-          <span>Here's what's trending</span>
+          <span>Log in with demo user here </span>
         </Link>
         </div>
       </div>

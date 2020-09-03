@@ -26,11 +26,11 @@ export default function PersonalModal({ handleClick }) {
   return (
     <>
       <div className='personalModal' onClick={handleClick} >
-        <div className='personalModalShow'>
-          <div className='accountNav'>
-            <p>Account</p>
-            <button onClick={logout}>Log out</button>
-          </div>
+      </div>
+      <div className='personalModalShow'>
+        <div className='accountNav'>
+          <p>Account</p>
+          <button onClick={logout}>Log out</button>
         </div>
       </div>
     </>

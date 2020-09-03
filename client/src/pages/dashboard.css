@@ -32,11 +32,11 @@ svg.personalModalButton {
   margin-top: 10px;
 }
 
-.personalModal button {
+.accountNav button {
   background-color: rgba(0,0,0,0);
   border: none;
-  color: rgba(103, 255, 56, .5);
   margin-right: 15px;
+  color: rgba(103, 255, 56, .5);
   font-size: 14px;
   cursor: pointer;
 }
@@ -49,8 +49,8 @@ p {
 .personalModalShow {
 
   position: absolute;
-  top: 38px;
-  right: 0px;
+  top: 43px;
+  right: 5px;
   background-color: rgba(103, 255, 56, 1);
   width: 240px;
 
@@ -61,6 +61,7 @@ p {
   justify-content: space-between;
   right: 0px;
   background-color: rgba(0, 0, 0, .8);
+  color: rgba(103, 255, 56, .5);
   width: 240px;
   height: 36px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
