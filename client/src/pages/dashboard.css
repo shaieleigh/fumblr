@@ -1,0 +1,57 @@
+body {
+  background-color: black!important;
+}
+
+svg {
+  font-size: 32px;
+  background-size: 30px 40px;
+  fill: rgba(103, 255, 56, .5);
+}
+
+.personalInfo {
+  background-color: rgba(0,0,0,0);
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.personalInfo:focus {
+  outline: none!important;
+  border: none;
+}
+
+
+.personalModal {
+  position: absolute;
+  top: 38px;
+  right: 0;
+  background-color: rgba(103, 255, 56, 1);
+  color: rgba(103, 255, 56, .5);
+  width: 240px;
+  height: 36px;
+  margin-right: 5px;
+  margin-top: 10px;
+}
+
+.personalModal button {
+  background-color: rgba(0,0,0,0);
+  border: none;
+  color: rgba(103, 255, 56, .5);
+  margin-right: 15px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+p {
+  padding-left: 10px;
+  font-size: 14px;
+}
+
+.accountNav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: rgba(0, 0, 0, .8);
+  height: 100%;
+  width: 100%;
+}

@@ -1,0 +1,103 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+}
+
+#root {
+  height: 100%;
+}
+
+
+
+div.logo {
+  font-size: 45px;
+  font-family: Exo;
+  margin-left: 20px;
+  color: white;
+}
+
+h1 {
+  font-family: Exo, Algerian, Verdana;
+  font-size: 65px;
+  margin-bottom: 0px;
+  padding: 0px;
+  display: inline-block;
+  margin-top: 60px;
+  color: white;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center
+}
+
+input {
+  width: 20%;
+  height: 50px;
+  min-width: 300px;
+  margin: 0, auto;
+  border: .5px solid rgb(231, 231, 231);
+  box-sizing: border-box;
+  padding-left: 10px;
+  font-size: 16px;
+  color: rgb(68, 67, 67);
+}
+
+::placeholder {
+  color: rgb(167, 167, 167)
+}
+
+input:focus{
+  outline: none;
+}
+
+.loginSignup {
+  height: 50px;
+  width: 20%;
+  min-width: 300px;
+  margin-top: 10px;
+  border-radius: 2px;
+  border: none;
+  background-color: #00b8ff;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.signup {
+  text-decoration: none;
+  margin: 15px 20px;
+  font-size: 15px;
+  background-color: ghostwhite;
+  color: rgb(77, 76, 76);
+  font-weight: bold;
+  padding: 5px 12px;
+  border-radius: 2px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+button {
+  border: none;
+  outline: none;
+}

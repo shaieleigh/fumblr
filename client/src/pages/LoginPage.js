@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { login } from '../store/auth';
 import { Redirect, Link } from 'react-router-dom';
+import './auth.css';
 import './loginPage.css';
 
 
@@ -43,6 +44,7 @@ export default function LoginPage() {
             onChange={e => setPassword(e.target.value)} />
           <button className='loginSignup'>Log in</button>
         </form>
+        <p></p>
       </div>
     </div>
   )
