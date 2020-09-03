@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter } from 'react-router-dom';
-import { CssBaseline } from '@material-ui/core';
 import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
 
 import Pages from './pages/Pages';
@@ -42,7 +41,6 @@ function App() {
 
   return (
     <ThemeProvider theme={theme}>
-      <CssBaseline />
       <BrowserRouter>
           <Pages />
       </BrowserRouter>
