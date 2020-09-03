@@ -37,9 +37,7 @@ app.use(
 
 app.use(routes);
 
-app.get('/', (req, res) => {
-  res.send('My Home Page');
-});
+
 
 // Serve React Application
 // This should come after routes, but before 404 and error handling.
