@@ -4,11 +4,11 @@ import Cookies from 'js-cookie';
 import { useDispatch, useSelector } from 'react-redux';
 import { setUser } from '../store/auth';
 
-export default function PersonalModal() {
+export default function PersonalModal({ handleClick }) {
   const currentUserId = useSelector(state => state.auth.id)
   const dispatch = useDispatch();
   const logout = async () => {
-    const res = await fetch(`/api/session`, {
+    await fetch(`/api/session`, {
       method: 'DELETE',
       headers: {
         'XSRF-TOKEN': Cookies.get('XSRF-TOKEN')
@@ -16,19 +16,23 @@ export default function PersonalModal() {
     });
     dispatch(setUser({}));
   };
-  if(!currentUserId){
-  return (
-    <Redirect to='/login' />
-  )
-}
+  if (!currentUserId) {
+    return (
+      <Redirect to='/login' />
+    )
+  }
+
 
   return (
-
-    <div className='personalModal'>
-      <div className='accountNav'>
-        <p>Account</p>
-        <button onClick={logout}>Log out</button>
+    <>
+      <div className='personalModal' onClick={handleClick} >
+        <div className='personalModalShow'>
+          <div className='accountNav'>
+            <p>Account</p>
+            <button onClick={logout}>Log out</button>
+          </div>
+        </div>
       </div>
-    </div>
+    </>
   )
 }
