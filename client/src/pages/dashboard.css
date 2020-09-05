@@ -1,0 +1,112 @@
+body {
+  background-color: black!important;
+}
+
+svg.personalModalButton {
+  font-size: 32px;
+  background-size: 30px 40px;
+  fill: rgba(103, 255, 56, .5);
+}
+
+.personalInfo {
+  background-color: rgba(0,0,0,0);
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.personalInfo:focus {
+  outline: none!important;
+  border: none;
+}
+
+
+.personalModal {
+  position: absolute;
+  right: 0;
+  background-color: rgba(0,0,0,0);
+  color: rgba(103, 255, 56, .5);
+  width: 1280px;
+  height: 600px;
+  margin-right: 5px;
+  margin-top: 10px;
+}
+
+.accountNav button {
+  background-color: rgba(0,0,0,0);
+  border: none;
+  margin-right: 15px;
+  color: rgba(103, 255, 56, .5);
+  font-size: 14px;
+  cursor: pointer;
+}
+
+p {
+  padding-left: 10px;
+  font-size: 14px;
+}
+
+.personalModalShow {
+
+  position: absolute;
+  top: 43px;
+  right: 5px;
+  background-color: rgba(103, 255, 56, 1);
+  width: 240px;
+
+}
+.accountNav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  right: 0px;
+  background-color: rgba(0, 0, 0, .8);
+  color: rgba(103, 255, 56, .5);
+  width: 240px;
+  height: 36px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  z-index: 1;
+}
+
+.demouserBox {
+  color: white;
+  fill: white;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold;
+  font-size: 12px;
+  text-align: center;
+  cursor: pointer;
+  /* height: 50px; */
+  padding-top: 20px;
+  display: inline;
+}
+
+.bi {
+  padding-right: 5px;
+  font-weight: bold;
+  padding-bottom: 14px;
+  display: inline;
+}
+
+span {
+  margin: 0px;
+  padding-bottom: 15px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 15px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+
+.demouserLink {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.textDecoration {
+  text-decoration: none;
+}
