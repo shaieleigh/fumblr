@@ -8,7 +8,14 @@ const { generateToken } = require("../util/auth");
 const {
   jwtConfig: { expiresIn },
 } = require("../../config");
-
+const { s3,
+  singlePublicFileUpload,
+  multiplePublicFileUpload,
+  singlePrivateFileUpload,
+  multiplePrivateFileUpload,
+  retrievePrivateFile,
+  singleMulterUpload,
+  multipleMulterUpload } = require('../util/aws')
 
 const validateSignup = [
   check("username", "must be between 5 and 70 characters")
@@ -25,8 +32,11 @@ const router = express.Router();
 
 router.get('/', asyncHandler(async function (_req, res, _next) {
   const users = await User.findAll();
-  res.json({ users });
+  data= res.json({ users });
+  console.log(data);
 }));
+
+
 
 router.post(
   "/",
