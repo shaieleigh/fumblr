@@ -9,9 +9,11 @@ import './dashboard.css';
 export default function Dashboard() {
   const currentUserId = useSelector(state => state.auth.id);
 
-  useEffect(() =>{
+  useEffect(() => {
     async function users() {
       const res = await fetch('/users')
+      const data = await res.json();
+      console.log(data);
     }
     users();
   });
@@ -20,8 +22,8 @@ export default function Dashboard() {
   if (!currentUserId) return <Redirect to='/login' />;
   return (
     <nav>
-        <div className='logo'>f</div>
-        <PersonalModalButton  />
-      </nav>
+      <div className='logo'>f</div>
+      <PersonalModalButton />
+    </nav>
   )
 }
