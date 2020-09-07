@@ -11,9 +11,9 @@ export default function Dashboard() {
 
   useEffect(() => {
     async function users() {
-      const res = await fetch('/users')
+      const res = await fetch('/api/users')
       const data = await res.json();
-      console.log(data);
+      console.log(data)
     }
     users();
   });
@@ -22,7 +22,7 @@ export default function Dashboard() {
   if (!currentUserId) return <Redirect to='/login' />;
   return (
     <nav>
-      <div className='logo'>f</div>
+      <div className='logoD logo'>f</div>
       <PersonalModalButton />
     </nav>
   )

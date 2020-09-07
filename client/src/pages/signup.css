@@ -6,6 +6,16 @@
   background-size: cover;
   width: 100%;
   height: 100%;
-
 }
 
+
+a.login {
+  text-decoration: none;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold;
+  color: white;
+  padding: 10px;
+  margin: 10px;
+  font-size: 15px;
+  background-color: rgba(0, 0, 0, .1)
+}

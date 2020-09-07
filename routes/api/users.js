@@ -2,7 +2,7 @@ const express = require('express');
 const asyncHandler = require('express-async-handler');
 const { check } = require("express-validator");
 
-const { User } = require("../../db/models");
+const { User, Blogs } = require("../../db/models");
 const { handleValidationErrors } = require("../util/validation");
 const { generateToken } = require("../util/auth");
 const {
@@ -32,7 +32,8 @@ const router = express.Router();
 
 router.get('/', asyncHandler(async function (_req, res, _next) {
   const users = await User.findAll();
-  res.json({ users });
+  const blogs = await Blogs.findAll();
+  data = await res.json({ users, blogs });
 }));
 
 

@@ -15,11 +15,6 @@ svg.personalModalButton {
   cursor: pointer;
 }
 
-.personalInfo:focus {
-  outline: none!important;
-  border: none;
-}
-
 
 .personalModal {
   position: absolute;
@@ -109,4 +104,14 @@ span {
 
 .textDecoration {
   text-decoration: none;
+}
+
+.highlight {
+  font-size: 32px;
+  background-size: 30px 40px;
+  fill: rgba(0, 207, 53, 1);
+}
+
+div.logoD {
+  color: rgba(0, 207, 53, 1);
 }

@@ -24,6 +24,21 @@ div.logo {
   color: white;
 }
 
+div.logo:hover {
+  animation: color-change 1s infinite;
+}
+
+
+@keyframes color-change {
+  0% { color: green; }
+  17% { color: blue; }
+  34% { color: violet; }
+  50% { color: indigo; }
+  67% { color: red; }
+  82% { color: orange; }
+  100% { color: yellow; }
+}
+
 h1 {
   font-family: Exo, Algerian, Verdana;
   font-size: 65px;
