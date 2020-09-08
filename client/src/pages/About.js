@@ -5,7 +5,7 @@ const About = () => {
   return (
     <>
       <div className='coolThing'>
-        
+
         <svg className="about-graphic" version="1.1" xmlns="http://www.w3.org/2000/svg" > <g className="graphic-icon reblog-b" style={{ opacity: 1, transform: { translateX: 0, translateY: 0 } }}><path fill='rgba(0,0,0,0)' opacity='0' stroke="rgb(0,170,0)" strokeWidth="2.6" strokeLinecap="round" strokeLinejoin="round" strokeMiterlimit="10" d="
     M138.5,209.7l9-9v6.5h16.9v-2.4l6.7-6.7v13c0,1.6-1.3,2.9-2.9,2.9h-20.7v6.6l-9-9C138,211,138,210.2,138.5,209.7z"></path><path fill='rgba(0,0,0,0)' opacity='0' stroke="rgb(0,170,0)" strokeWidth="2.6" strokeLinecap="round" strokeLinejoin="round" strokeMiterlimit="10" d="
     M139.1,191.8c0-1.6,1.3-2.9,2.9-2.9h20.7v-6.6l9,9c0.5,0.5,0.5,1.3,0,1.8l-9,9v-6.5h-16.9v2.4l-6.7,6.7V191.8z"></path></g><g className="graphic-icon reblog-a" style={{ opacity: 1, transform: { translateX: 0, translateY: 0 } }}><path fill='rgba(0,0,0,0)' opacity='0' stroke="rgb(0,170,0)" strokeWidth="2.6" strokeLinecap="round" strokeLinejoin="round" strokeMiterlimit="10" d="
@@ -122,17 +122,17 @@ const About = () => {
         c-0.3-0.3-0.3-0.7-0.2-1l3.5-8.9c0.1-0.4,0.5-0.6,0.9-0.6c0.1,0,0.1,0,0.2,0c0.5,0.1,0.8,0.5,0.8,1l0,5l1.7-0.6c0.1,0,0.2,0,0.3,0
         c0.3,0,0.5,0.1,0.7,0.3c0.3,0.3,0.3,0.7,0.2,1.1l-4.1,9.1C263.7,176.4,263.4,176.6,263,176.6z"></path></g></g><path className="graphic-icon like-c" fill='rgba(0,0,0,0)' opacity='0' stroke="rgb(0,170,0)" strokeWidth="2.6" strokeLinecap="round" strokeLinejoin="round" strokeMiterlimit="10" d="
 M122.4,196.5c-0.3,0.2-0.7,0.2-1,0c-7-3.7-11.7-9-11.6-14.7c0.1-5.2,3.6-6.9,6.3-6.8c2.7,0.1,5,1.8,5.8,2.6h0
-c0.8-0.8,3.1-2.5,5.8-2.6c2.7-0.1,6.2,1.6,6.3,6.8C134.1,187.5,129.4,192.8,122.4,196.5z" style={{ opacity: 1, transform: { translateX: 0, translateY: 0 } }}></path><path className="graphic-icon like-b" fill='rgba(0,0,0,0)' opacity='0' stroke="rgb(0,170,0)" strokeWidth="2.6" strokeLinecap="round" strokeLinejoin="round" strokeMiterlimit="10" d="
+c0.8-0.8,3.1-2.5,5.8-2.6c2.7-0.1,6.2,1.6,6.3,6.8C134.1,187.5,129.4,192.8,122.4,196.5z" style={{ transform: { translateX: 0, translateY: 0 } }}></path><path className="graphic-icon like-b" fill='rgba(0,0,0,0)' opacity='0' stroke="rgb(0,170,0)" strokeWidth="2.6" strokeLinecap="round" strokeLinejoin="round" strokeMiterlimit="10" d="
 M30.9,185.6c-0.2,0.1-0.5,0.1-0.7,0c-4.8-2.5-8-6.1-7.9-10.1c0.1-3.6,2.5-4.7,4.3-4.7c1.8,0,3.4,1.2,4,1.8h0c0.5-0.6,2.1-1.7,4-1.8
-c1.8,0,4.2,1.1,4.3,4.7C39,179.5,35.7,183.1,30.9,185.6z" style={{ opacity: 1, transform: { translateX: 0, translateY: 0 } }}></path><path className="graphic-icon like-a" fill='rgba(0,0,0,0)' opacity='0' stroke="rgb(0,170,0)" strokeWidth="2.6" strokeLinecap="round" strokeLinejoin="round" strokeMiterlimit="10" d="
+c1.8,0,4.2,1.1,4.3,4.7C39,179.5,35.7,183.1,30.9,185.6z" style={{ transform: { translateX: 0, translateY: 0 } }}></path><path className="graphic-icon like-a" fill='rgba(0,0,0,0)' opacity='0' stroke="rgb(0,170,0)" strokeWidth="2.6" strokeLinecap="round" strokeLinejoin="round" strokeMiterlimit="10" d="
 M146.3,80.1c-0.4,0.2-0.8,0.2-1.1,0c-8.1-4.3-13.6-10.4-13.4-17c0.1-6,4.2-8,7.3-7.9c3.1,0.1,5.8,2,6.7,3h0c0.9-1,3.6-3,6.7-3
-c3.1-0.1,7.2,1.9,7.3,7.9C159.9,69.7,154.5,75.8,146.3,80.1z" style={{ opacity: 1, transform: { translateX: 0, translateY: 0 } }}></path><polygon className="graphic-icon follow-c" fill='rgba(0,0,0,0)' opacity='0' stroke="rgb(0,170,0)" strokeWidth="2.6" strokeLinecap="round" strokeLinejoin="round" strokeMiterlimit="10" points="
+c3.1-0.1,7.2,1.9,7.3,7.9C159.9,69.7,154.5,75.8,146.3,80.1z" style={{ transform: { translateX: 0, translateY: 0 } }}></path><polygon className="graphic-icon follow-c" fill='rgba(0,0,0,0)' opacity='0' stroke="rgb(0,170,0)" strokeWidth="2.6" strokeLinecap="round" strokeLinejoin="round" strokeMiterlimit="10" points="
 120.9,158.3 112.9,158.3 112.9,166.3 105,166.3 105,158.3 97,158.3 97,150.3 105,150.3 105,142.3 112.9,142.3 112.9,150.3
-120.9,150.3 " style={{ opacity: 1, transform: { translateX: 0, translateY: 0 } }}></polygon><polygon className="graphic-icon follow-b" fill='rgba(0,0,0,0)' opacity='0' stroke="rgb(0,170,0)" strokeWidth="2.6" strokeLinecap="round" strokeLinejoin="round" strokeMiterlimit="10" points="
+120.9,150.3 " style={{ transform: { translateX: 0, translateY: 0 } }}></polygon><polygon className="graphic-icon follow-b" fill='rgba(0,0,0,0)' opacity='0' stroke="rgb(0,170,0)" strokeWidth="2.6" strokeLinecap="round" strokeLinejoin="round" strokeMiterlimit="10" points="
 175.1,144.9 170,144.9 170,150.1 164.8,150.1 164.8,144.9 159.6,144.9 159.6,139.8 164.8,139.8 164.8,134.6 170,134.6 170,139.8
-175.1,139.8 " style={{ opacity: 1, transform: { translateX: 0, translateY: 0 } }}></polygon><polygon className="graphic-icon follow-a" fill='rgba(0,0,0,0)' opacity='0' stroke="rgb(0,170,0)" strokeWidth="2.6" strokeLinecap="round" strokeLinejoin="round" strokeMiterlimit="10" points="
+175.1,139.8 " style={{ transform: { translateX: 0, translateY: 0 } }}></polygon><polygon className="graphic-icon follow-a" fill='rgba(0,0,0,0)' opacity='0' stroke="rgb(0,170,0)" strokeWidth="2.6" strokeLinecap="round" strokeLinejoin="round" strokeMiterlimit="10" points="
 197.7,30.7 192.5,30.7 192.5,35.9 187.3,35.9 187.3,30.7 182.1,30.7 182.1,25.6 187.3,25.6 187.3,20.4 192.5,20.4 192.5,25.6
-197.7,25.6 " style={{ opacity: 1, transform: { translateX: 0, translateY: 0 } }}></polygon>
+197.7,25.6 " style={{ transform: { translateX: 0, translateY: 0 } }}></polygon>
 
         </svg>
         <div className='flogoDiv'>
