@@ -2,10 +2,13 @@ body {
   background-color: black!important;
 }
 
-svg.personalModalButton {
+button svg.personalModalButton {
   font-size: 32px;
   background-size: 30px 40px;
   fill: rgba(103, 255, 56, .5);
+  animation: none;
+  opacity: 1;
+  stroke: none;
 }
 
 .personalInfo {
@@ -112,6 +115,6 @@ span {
   fill: rgba(0, 207, 53, 1);
 }
 
-div.logoD {
+.logoD {
   color: rgba(0, 207, 53, 1);
 }

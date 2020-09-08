@@ -1,15 +1,58 @@
+.root {
+  z-index: -1;
+}
 
+p {
+  padding-left: 0!important
+}
+
+nav {
+  position: relative;
+}
 
 .celtic {
   background-image: url(./celtic-green-man-celtic-artist-angela-dawn-mackay2.jpg);
+  /* background-color: yellowgreen; */
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
   height: 100%;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: -1;
+  color: white;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  bottom: 50px;
 }
 
+.swivelUp {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
 
-a.login {
+.celticAfter {
+  animation: goToAboutPage 1s linear 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes goToAboutPage {
+  100% { bottom: 100% }
+}
+
+.mottoQuote {
+  line-height: 25px;
+  padding-bottom: 20px;
+}
+
+.mottoQuote p {
+  font-size: 15px
+}
+
+.login {
   text-decoration: none;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-weight: bold;
@@ -18,4 +61,103 @@ a.login {
   margin: 10px;
   font-size: 15px;
   background-color: rgba(0, 0, 0, .1)
+}
+
+.pita {
+  width: 100%;
+}
+
+.aboutPage {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -4;
+  background-color: #00cf35;
+}
+
+div.clickToAboutPage {
+  position: absolute;
+  bottom: 0px;
+  height: 50px;
+  width: 100%;
+  cursor: pointer;
+  color: white;
+  font-size: 15px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold;
+  z-index: 10;
+}
+
+.whatIsTumblr {
+  letter-spacing: -1px;
+  padding-top: 15px;
+}
+
+.dotDiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: absolute;
+  left: 40px;
+  top: 40%;
+
+}
+
+.dot {
+  border: 3px solid rgba(255, 255, 255, .5);
+  width: 10px;
+  height: 10px;
+  border-radius: 50px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.dotActive {
+  background-color: white;
+}
+
+@keyframes goToAboutPage {
+  0% { bottom: 50px }
+  50% { bottom: 50% }
+  100% { bottom: 100% }
+}
+
+.aboutPage {
+  color: white;
+}
+
+h1.flogo {
+  color: white;
+  position: absolute;
+  font-size: 150px;
+}
+
+h2.flogo2 {
+  color: #00cf35;
+  position: absolute;
+  font-size: 140px;
+  top: 6px;
+}
+
+.coolThing {
+  position: relative;
+  top: 20%;
+  width: 500px;
+  height: 400px;
+}
+
+.about-graphic {
+  height: 400px;
+}
+
+.dotPita {
+  z-index: 2;
+}
+
+.graphic-icon {
+  width: 110%;
+}
+
+path {
+  width: 100%;
 }

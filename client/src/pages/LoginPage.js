@@ -26,7 +26,7 @@ export default function LoginPage() {
   return (
     <div className='gothGirl'>
       <nav>
-        <div className='logo'>f</div>
+        <Link className='logo' to={currentUserId ? '/' : '/login'}>f</Link>
         <Link to='/signup' className='signup'>Sign up</Link>
       </nav>
       <div className='loginBox'>

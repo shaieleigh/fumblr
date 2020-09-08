@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { Redirect } from 'react-router-dom';
+import { Redirect, Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import PersonalModalButton from './PersonalModalButton';
 import './dashboard.css';
@@ -22,7 +22,7 @@ export default function Dashboard() {
   if (!currentUserId) return <Redirect to='/login' />;
   return (
     <nav>
-      <div className='logoD logo'>f</div>
+      <Link className='logoD logo' to={currentUserId ? '/' : '/login'}>f</Link>
       <PersonalModalButton />
     </nav>
   )

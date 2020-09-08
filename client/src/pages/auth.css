@@ -17,14 +17,15 @@ body {
 
 
 
-div.logo {
+.logo {
   font-size: 45px;
   font-family: Exo;
   margin-left: 20px;
   color: white;
+  text-decoration: none;
 }
 
-div.logo:hover {
+.logo:hover {
   animation: color-change 1s infinite;
 }
 
@@ -39,13 +40,13 @@ div.logo:hover {
   100% { color: yellow; }
 }
 
-h1 {
+h1, h2 {
   font-family: Exo, Algerian, Verdana;
   font-size: 65px;
   margin-bottom: 0px;
   padding: 0px;
   display: inline-block;
-  margin-top: 60px;
+  /* margin-top: 60px; */
   color: white;
 }
 
@@ -110,9 +111,16 @@ nav {
   padding: 5px 12px;
   border-radius: 2px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+
 }
 
 button {
   border: none;
   outline: none;
+}
+
+@media screen and (min-height:900px) {
+  .loginBox {
+    margin: 150px;
+  }
 }
