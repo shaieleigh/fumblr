@@ -8,6 +8,12 @@
   animation: opacity 2s 1 2s;
 } */
 
+.about-graphic path {
+  opacity: 0;
+  animation: opacity 3s 1 3s;
+  animation-fill-mode: forwards;
+}
+
 .graphic-icon, g, circle, line, polygon, polyline {
   animation: opacity 3s 1 3s;
   animation-fill-mode: forwards;
@@ -18,4 +24,39 @@
 @keyframes opacity {
   0% { opacity: 0 }
   100% { opacity: 1 }
+}
+
+.flogo, .flogo2 {
+  opacity: 0;
+  animation: color-change 1s infinite;
+  position: relative;
+  animation: opacity 3s 1 5s;
+  animation-fill-mode: forwards;
+  cursor: pointer;
+}
+
+.flogo2:hover {
+  cursor: pointer;
+}
+
+
+@keyframes color-change {
+  0% { color: green; }
+  17% { color: blue; }
+  34% { color: violet; }
+  50% { color: indigo; }
+  67% { color: red; }
+  82% { color: orange; }
+  100% { color: yellow; }
+}
+
+.flogoDiv {
+  position: relative;
+  bottom: 92%;
+  cursor: pointer;
+  z-index: 3;
+}
+
+.flogoDiv:hover {
+  cursor: pointer;
 }
