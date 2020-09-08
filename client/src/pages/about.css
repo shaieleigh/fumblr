@@ -8,7 +8,7 @@
   animation: opacity 2s 1 2s;
 } */
 
-path, g, circle, line, polygon, polyline {
+.graphic-icon, g, circle, line, polygon, polyline {
   animation: opacity 3s 1 3s;
   animation-fill-mode: forwards;
   stroke: rgb(0, 170, 0);
