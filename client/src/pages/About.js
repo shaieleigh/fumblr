@@ -1,5 +1,6 @@
 import React from 'react';
 import './about.css'
+import { Link } from 'react-router-dom';
 
 const About = () => {
   return (
@@ -139,6 +140,7 @@ c3.1-0.1,7.2,1.9,7.3,7.9C159.9,69.7,154.5,75.8,146.3,80.1z" style={{ transform: 
 
         <div className='flogo'><h1 className='flogo'>f</h1></div>
         <div className='flogo2'><h2 className='flogo2'>f</h2></div>
+
 
         </div>
       </div >

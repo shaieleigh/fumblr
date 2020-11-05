@@ -33,6 +33,7 @@
   animation: opacity 3s 1 5s;
   animation-fill-mode: forwards;
   cursor: pointer;
+  outline: 3px solid rgba(0, 170, 0, 0);
 }
 
 .flogo2:hover {

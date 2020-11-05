@@ -41,8 +41,8 @@ export default function SignUp() {
             <div className='signUpPage'>
               <h1>fumblr</h1>
               <div className='mottoQuote'>
-                <p>Come for what you love.</p>
-                <p>Stay for what you discover.</p>
+                <p className='signupP'>Come for what you love.</p>
+                <p className='signupP'>Stay for what you discover.</p>
               </div>
               <form onSubmit={handleSubmit}>
                 <input
