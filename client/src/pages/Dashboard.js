@@ -1,6 +1,9 @@
 import React, { useEffect } from 'react';
 import { Redirect, Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
+
+import BlogScroll from '../components/BlogScroll';
+import SideBlurb from '../components/SideBlurb'
 import PersonalModalButton from './PersonalModalButton';
 import './dashboard.css';
 
@@ -21,9 +24,15 @@ export default function Dashboard() {
 
   if (!currentUserId) return <Redirect to='/login' />;
   return (
-    <nav>
-      <Link className='logoD logo' to={currentUserId ? '/' : '/login'}>f</Link>
-      <PersonalModalButton />
-    </nav>
+    <>
+      <nav>
+        <Link className='logoD logo' to={currentUserId ? '/' : '/login'}>f</Link>
+        <PersonalModalButton />
+      </nav>
+      <div className='scroll'>
+        <BlogScroll />
+        <SideBlurb />
+      </div>
+    </>
   )
 }
