@@ -10,11 +10,12 @@ export default function BlogScroll() {
       </div>
       <div>
         <div>
-          <span class="material-icons">text_format</span>
+          <span className="material-icons">text_format</span>
         </div>
         <div>
           <TextIcon />
         </div>
+        <div><i className="fas fa-headphones-alt"></i></div>
       </div>
     </div>
   )
