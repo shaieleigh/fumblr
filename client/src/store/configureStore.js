@@ -1,9 +1,13 @@
 import { createStore, compose, combineReducers, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
 import auth from './auth';
+import blogsList from './blogs';
+import usersList from './usersList';
 
 const rootReducer = combineReducers({
-  auth
+  auth,
+  blogsList,
+  usersList
 });
 
 let storeEnhancer;

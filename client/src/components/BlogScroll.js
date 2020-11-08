@@ -1,4 +1,5 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 
 import TextIcon from './icons/TextIcon.js';
 import PhotoIcon from './icons/PhotoIcon.js';
@@ -9,6 +10,10 @@ import AudioIcon from './icons/AudioIcon.js';
 import VideoIcon from './icons/VideoIcon.js';
 
 export default function BlogScroll() {
+  const lastItem = useSelector(state => state.blogsList.lastItemId);
+  const allBlogs = useSelector(state => state.blogsList.allBlogs);
+  const allUsers = useSelector(state => state.usersList);
+
   return (
     <div className='blogScroll'>
       <div className='profPicDBScroll'>
@@ -16,9 +21,6 @@ export default function BlogScroll() {
       </div>
       <main className='dashboardMain'>
         <div className='dashboardNavBar'>
-          {/* <div>
-            <span className="material-icons">text_format</span>
-          </div> */}
           <TextIcon />
           <PhotoIcon />
           <QuoteIcon />
@@ -27,6 +29,7 @@ export default function BlogScroll() {
           <AudioIcon />
           <VideoIcon />
         </div>
+        <div></div>
       </main>
     </div>
   )
