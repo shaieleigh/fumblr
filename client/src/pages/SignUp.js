@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { signup } from '../store/auth';
 import { Redirect, Link } from 'react-router-dom';
-import DotComponent from './DotComponent';
+import DotComponent from '../components/DotComponent';
 import About from './About'
 import './auth.css';
 import './signup.css';

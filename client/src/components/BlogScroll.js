@@ -26,14 +26,6 @@ export default function BlogScroll() {
           <ChatIcon />
           <AudioIcon />
           <VideoIcon />
-          {/* <div className='dashNavButtons'><TextIcon /><p className='dashbIconFont'>Text</p></div>
-          <div className='dashNavButtons'><TextIcon /><p className='dashbIconFont'>Text</p></div>
-          <div className='dashNavButtons'><TextIcon /><p className='dashbIconFont'>Text</p></div>
-          <div className='dashNavButtons'><TextIcon /><p className='dashbIconFont'>Text</p></div>
-          <div className='dashNavButtons'><TextIcon /><p className='dashbIconFont'>Text</p></div>
-          <div className='dashNavButtons'><TextIcon /><p className='dashbIconFont'>Text</p></div>
-          <div className='dashNavButtons'><TextIcon /><p className='dashbIconFont'>Text</p></div> */}
-          {/* <div><i className="fas fa-headphones-alt"></i></div> */}
         </div>
       </main>
     </div>
