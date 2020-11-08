@@ -128,9 +128,9 @@ span {
   margin-top: 5%;
 }
 
-/* .profPicDBScroll {
-
-} */
+.profPicDBScroll {
+  border-radius: 5px;
+}
 
 .material-icons {
   color: rgba(0, 207, 53, 1);
@@ -150,4 +150,36 @@ div.blogScroll {
   flex-direction: row;
   justify-content: space-between;
   width: 100%;
+}
+
+.dashboardIcons {
+  /* fill: rgba(0, 207, 53, 1); */
+  fill: rgb( 103, 255, 56 );
+}
+
+.dashbIconFont {
+    /* color: rgba(0, 207, 53, 1); */
+    color: rgb( 103, 255, 56 );
+    font-weight: bold;
+    text-align: center;
+    padding-left: 0px;
+
+}
+
+.dashboardNavBar, .dashboardMain {
+  width: 100%;
+}
+
+.dashboardNavBar {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  min-height: 100px;
+  border-radius: 3px;
+  margin-bottom: 20px;
+}
+
+.dashNavButtons {
+  padding: 10px;
+  height: 80%;
 }
