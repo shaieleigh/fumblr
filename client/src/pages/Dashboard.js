@@ -4,7 +4,7 @@ import { useSelector } from 'react-redux';
 
 import BlogScroll from '../components/BlogScroll';
 import SideBlurb from '../components/SideBlurb'
-import PersonalModalButton from './PersonalModalButton';
+import PersonalModalButton from '../components/PersonalModalButton';
 import './dashboard.css';
 
 

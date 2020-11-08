@@ -1,5 +1,5 @@
 import React from 'react';
-import PersonalModal from './PersonalModal';
+import PersonalModal from '../components/PersonalModal';
 
 class PersonalModalButton extends React.Component {
   constructor() {

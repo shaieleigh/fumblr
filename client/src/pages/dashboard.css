@@ -130,6 +130,8 @@ span {
 
 .profPicDBScroll {
   border-radius: 5px;
+  /* margin-top: 0px !important; */
+  align-self: flex-start;
 }
 
 .material-icons {
@@ -170,6 +172,11 @@ div.blogScroll {
   width: 100%;
 }
 
+.dashboardMain {
+  height: 100%;
+  max-width: 540px;
+}
+
 .dashboardNavBar {
   display: flex;
   flex-direction: row;
@@ -177,9 +184,15 @@ div.blogScroll {
   min-height: 100px;
   border-radius: 3px;
   margin-bottom: 20px;
+  background-color: rgb(34, 34, 34);
 }
 
 .dashNavButtons {
   padding: 10px;
   height: 80%;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.dashboardMain, .profPicDBScroll {
+  margin: 0px 5px;
 }
