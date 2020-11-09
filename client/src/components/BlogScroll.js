@@ -1,5 +1,5 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
+// import { useSelector } from 'react-redux';
 
 import Blogs from './Blogs';
 
@@ -67,7 +67,7 @@ export default function BlogScroll() {
           <AudioIcon />
           <VideoIcon />
         </div>
-        <div>
+        <div className='allBlogs'>
           <Blogs />
         </div>
       </main>

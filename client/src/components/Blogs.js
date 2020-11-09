@@ -9,7 +9,7 @@ export default function Blogs() {
   // const dispatch = useDispatch();
   // const lastItem = useSelector(state => state.blogsList.lastItemId);
   let allBlogs = useSelector(state => state.blogsList.allBlogs);
-  // const allUsers = useSelector(state => state.usersList);
+  const allUsers = useSelector(state => state.usersList);
   let [ newAllBlogs, setNewAllBlogs ] = useState([]);
   // let [ ids, setIds ] = useState([]);
 
@@ -28,14 +28,22 @@ export default function Blogs() {
 
           // ids.push(int)
           let blog = newBlogs.splice(int, 1);
+          for(let i =0; i < allUsers.length; i++) {
+            if(allUsers[i].id === blog[0].userId) {
+              blog[0]['username'] = allUsers[i].username;
+            }
+          }
+
           blogs.push(blog[0]);
           console.log(blogs);
     }
     setNewAllBlogs(blogs);
     }
-  }, [allBlogs]);
+  }, [allBlogs, allUsers]);
 
   console.log('NEWALLBLOGS', newAllBlogs);
+  console.log('ALLUSERS', allUsers);
+  // <img src="https://64.media.tumblr.com/avatar_2d50bfe6eb4c_128.pnj"></img>
 
   return (
     <>
@@ -43,7 +51,8 @@ export default function Blogs() {
         newAllBlogs.map(blog =>{
         return (
           <div className='blog' key={blog.id}>
-            
+            <p className='usernameBar'>{blog.username}</p>
+            <p className='blogDotBlog'>{blog.blog}</p>
           </div>
         )}) : null }
     </>

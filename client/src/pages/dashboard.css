@@ -129,10 +129,14 @@ span {
 }
 
 .profPicDBScroll {
-  border-radius: 5px;
-  /* margin-top: 0px !important; */
   align-self: flex-start;
 }
+
+.myProfPic, .allBlogs {
+  border-radius: 3px;
+}
+
+
 
 .material-icons {
   color: rgba(0, 207, 53, 1);
@@ -168,7 +172,7 @@ div.blogScroll {
 
 }
 
-.dashboardNavBar, .dashboardMain {
+.dashboardNavBar, .dashboardMain, .usernameBar {
   width: 100%;
 }
 
@@ -198,7 +202,27 @@ div.blogScroll {
 }
 
 .blog {
-  width: 100px;
-  height: 50px;
-  background-color: aliceblue;
+  box-sizing: border-box;
+  width: 100%;
+
+  color: rgb( 103, 255, 56 );
+  margin-bottom: 15px;
+  background-color: rgb(34, 34, 34);
+  border-radius: 3px;
+}
+
+.allBlogs {
+  width: 100%;
+}
+
+.usernameBar {
+  padding: 15px;
+  width: 100%;
+  box-sizing: border-box;
+  font-weight: bold;
+}
+
+.blogDotBlog {
+  padding: 10px;
+  margin-bottom: 10px;
 }
