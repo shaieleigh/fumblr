@@ -25,7 +25,7 @@ export default function Dashboard() {
       console.log(data);
       dispatch(setAllUsers(data.users));
       dispatch(setAllBlogs(data.blogs));
-      const lastItem = data.blogs.pop();
+      const lastItem = data.blogs[data.blogs.length - 1]
       console.log('LAST ITEM', lastItem.id);
       dispatch(setLastItem(lastItem.id));
       return data;
