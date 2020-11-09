@@ -14,9 +14,9 @@ import './dashboard.css';
 export default function Dashboard() {
   const currentUserId = useSelector(state => state.auth.id);
   const dispatch = useDispatch();
-  const lastItem = useSelector(state => state.blogsList.lastItemId);
-  const allBlogs = useSelector(state => state.blogsList.allBlogs);
-  const allUsers = useSelector(state => state.usersList);
+  // const lastItem = useSelector(state => state.blogsList.lastItemId);
+  // const allBlogs = useSelector(state => state.blogsList.allBlogs);
+  // const allUsers = useSelector(state => state.usersList);
 
   useEffect(() => {
     async function users() {
@@ -31,7 +31,7 @@ export default function Dashboard() {
       return data;
     }
     users();
-  }, [lastItem]);
+  });
 
 
   if (!currentUserId) return <Redirect to='/login' />;
