@@ -10,36 +10,40 @@ export default function Blogs() {
   // const lastItem = useSelector(state => state.blogsList.lastItemId);
   let allBlogs = useSelector(state => state.blogsList.allBlogs);
   // const allUsers = useSelector(state => state.usersList);
-  // let [ newAllBlogs, setNewAllBlogs ] = useState([]);
+  let [ newAllBlogs, setNewAllBlogs ] = useState([]);
   // let [ ids, setIds ] = useState([]);
 
 
-  // useEffect(() => {
-  //   if(allBlogs) {
-  //     let newBlogs = []
-  //     allBlogs.map(blog => newBlogs.push(blog));
-  //     let number = newBlogs.length
-  //     while(number) {
-  //       let int = getRandomInt(number)
-  //       if(ids.includes(int)) {
-  //         continue
-  //       } else {
-  //         ids.push(int)
-  //         number--
-  //       }
-  //     }
-  //   }
-  // }, [allBlogs])
+  useEffect(() => {
+    let blogs = [];
+    if(allBlogs) {
+      let newBlogs = [];
+      allBlogs.map(blog => newBlogs.push(blog));
+      console.log('NEWBLOGS', newBlogs);
 
-  // console.log('NEWALLBLOGS', newAllBlogs);
+      while(newBlogs.length > 0) {
+        console.log('WHILEnUMBER', newBlogs.length);
+        let int = getRandomInt(newBlogs.length)
+        console.log('INT', int)
+
+          // ids.push(int)
+          let blog = newBlogs.splice(int, 1);
+          blogs.push(blog[0]);
+          console.log(blogs);
+    }
+    setNewAllBlogs(blogs);
+    }
+  }, [allBlogs]);
+
+  console.log('NEWALLBLOGS', newAllBlogs);
 
   return (
     <>
-      {allBlogs ?
-        allBlogs.map(blog =>{
+      {newAllBlogs ?
+        newAllBlogs.map(blog =>{
         return (
-          <div className='blog'>
-
+          <div className='blog' key={blog.id}>
+            
           </div>
         )}) : null }
     </>

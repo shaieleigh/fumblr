@@ -35,7 +35,7 @@ export const signup = (username, password, email) => {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        'XSRF-TOKEN': csrfToken,
+        'XSRF-TOKEN': csrfToken,   
       },
       body: JSON.stringify({username, password, email})
     });
