@@ -123,9 +123,10 @@ span {
 
 .scroll {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   width: 90%;
   margin-top: 5%;
+  align-items: unset;
 }
 
 .profPicDBScroll {
@@ -155,6 +156,7 @@ div.blogScroll {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+
   width: 100%;
 }
 
@@ -225,4 +227,11 @@ div.blogScroll {
 .blogDotBlog {
   padding: 10px;
   margin-bottom: 10px;
+}
+
+.sideBlurb {
+  width: 320px;
+  height: 1039px;
+  background-color: rgb(34, 34, 34);
+  margin-left: 30px;
 }
