@@ -33,10 +33,11 @@ export default function CreateModal() {
   return (
     <div className='positionedModal'>
       <div className='createBlogs' onClick={handleHideModal}></div>
-      {/* <div><img className='myProfPic' alt='myProfPic' src='https://64.media.tumblr.com/5a4406dbfeeca31d14dfb9f41a25d800/72d826b0c13960da-15/s64x64u_c1/f5f285077fe67a397c3e406778b7e7deffdb8c06.pnj' /></div> */}
-      {/* <div className='createBlogsForm'> */}
-{/*
-      </div> */}
+      <div className='createBlogsFormParent'>
+        <div className='createBlogsForm'>
+          <div className='profPic'><img className='myProfPic' alt='myProfPic' src='https://64.media.tumblr.com/5a4406dbfeeca31d14dfb9f41a25d800/72d826b0c13960da-15/s64x64u_c1/f5f285077fe67a397c3e406778b7e7deffdb8c06.pnj' /></div>
+        </div>
+      </div>
     </div>
   )
 }

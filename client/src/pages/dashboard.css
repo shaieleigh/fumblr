@@ -256,4 +256,29 @@ div.blogScroll {
 
 .positionedModal {
   position: absolute;
+
+}
+
+.createBlogsForm {
+  z-index: 1;
+  width: 440px;
+  min-height: 99px;
+  background-color: aliceblue;
+  /* position: absolute; */
+  /* bottom: 5px; */
+  /* top: 200px; */
+  border-radius: 3px;
+}
+
+.createBlogsFormParent {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profPic {
+  position: absolute;
+  left: -80px;
+
 }
