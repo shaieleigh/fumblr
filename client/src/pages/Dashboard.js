@@ -6,6 +6,7 @@ import BlogScroll from '../components/BlogScroll';
 import SideBlurb from '../components/SideBlurb';
 import HomeButton from '../components/HomeButton';
 import PersonalModalButton from '../components/PersonalModalButton';
+import CreateTextBlog from '../components/CreateTextBlog';
 import { setAllUsers } from '../store/usersList';
 import { setLastItem, setAllBlogs } from '../store/blogs';
 import './dashboard.css';
@@ -49,6 +50,7 @@ export default function Dashboard() {
         <BlogScroll />
         <SideBlurb />
       </div>
+      <CreateTextBlog />
     </>
   )
 }
