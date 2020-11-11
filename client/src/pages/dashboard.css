@@ -251,5 +251,9 @@ div.blogScroll {
   position: absolute;
   width: 100vw;
   height: 100vh;
-  background-color: rgb(34, 34, 34);
+  background-color: rgba(34, 34, 34, .8);
+}
+
+.positionedModal {
+  position: absolute;
 }

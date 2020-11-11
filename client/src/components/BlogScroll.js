@@ -4,7 +4,7 @@ import React from 'react';
 import Blogs from './Blogs';
 
 import TextIcon from './icons/TextIcon.js';
-import PhotoIcon from './icons/PhotoIcon.js';
+import PhotoIcon from './icons/CameraIcon.js';
 import QuoteIcon from './icons/QuoteIcon.js';
 import LinkIcon from './icons/LinkIcon.js';
 import ChatIcon from './icons/ChatIcon.js';
@@ -13,44 +13,8 @@ import VideoIcon from './icons/VideoIcon.js';
 
 
 
-// const getRandomInt = (max) => {
-//   return Math.floor(Math.random() * Math.floor(max));
-// }
-
 export default function BlogScroll() {
-  // const lastItem = useSelector(state => state.blogsList.lastItemId);
-  // const allBlogs = useSelector(state => state.blogsList.allBlogs);
-  // const allUsers = useSelector(state => state.usersList);
 
-
-
-  // const listAllBlogs = () => {
-  //   let listBlogs = allBlogs
-  //   console.log('LISTBLOGS', listBlogs)
-  //   let blogOrder = [];
-  //   while(listBlogs.length) {
-  //     let blogId = getRandomInt(lastItem);
-  //     for (let i = 0; i < listBlogs.length; i++) {
-  //       let blog = listBlogs[i];
-  //       if (blog.id !== blogId) {
-  //         continue;
-  //       } else {
-  //         listBlogs = listBlogs.slice(0, i) + listBlogs.slice(i+1);
-  //         blogOrder.push(i)
-  //       }
-
-  //     }
-  //   }
-  //   return blogOrder;
-  // }
-
-  // let listOfBlogs;
-  // if(allBlogs !== undefined) {
-  //   let newArray = listAllBlogs();
-  //   listOfBlogs = newArray.map(blogId => <Blog />)
-  // }
-
-  // console.log('LISTOFBLOGS', listOfBlogs)
 
   return (
     <div className='blogScroll'>
