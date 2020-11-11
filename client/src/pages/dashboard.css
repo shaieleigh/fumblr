@@ -129,6 +129,7 @@ span {
   align-items: unset;
 }
 
+
 .profPicDBScroll {
   align-self: flex-start;
 }
@@ -234,4 +235,14 @@ div.blogScroll {
   height: 1039px;
   background-color: rgb(34, 34, 34);
   margin-left: 30px;
+}
+
+.homeButton {
+  fill: rgba(0, 207, 53, 1);
+  padding: 10px;
+}
+
+.rightSideNavBar {
+  display: flex;
+  flex-direction: row;
 }

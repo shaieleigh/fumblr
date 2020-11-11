@@ -3,7 +3,8 @@ import { Redirect, Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 
 import BlogScroll from '../components/BlogScroll';
-import SideBlurb from '../components/SideBlurb'
+import SideBlurb from '../components/SideBlurb';
+import HomeButton from '../components/HomeButton';
 import PersonalModalButton from '../components/PersonalModalButton';
 import { setAllUsers } from '../store/usersList';
 import { setLastItem, setAllBlogs } from '../store/blogs';
@@ -39,7 +40,10 @@ export default function Dashboard() {
     <>
       <nav>
         <Link className='logoD logo' to={currentUserId ? '/' : '/login'}>f</Link>
-        <PersonalModalButton />
+        <div className='rightSideNavBar'>
+          <HomeButton />
+          <PersonalModalButton />
+        </div>
       </nav>
       <div className='scroll'>
         <BlogScroll />
