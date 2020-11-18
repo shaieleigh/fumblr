@@ -11,7 +11,7 @@ import { setCreateImageModal,
 
 export default function CreateModal() {
   const dispatch = useDispatch();
-    const createTextModal = useSelector(state => state.createModalReducer.createTextModal);
+  const createTextModal = useSelector(state => state.createModalReducer.createTextModal);
   const createImageModal = useSelector(state => state.createModalReducer.createImageModal);
   const createQuoteModal = useSelector(state => state.createModalReducer.createQuoteModal);
   const createLinkModal = useSelector(state => state.createModalReducer.createLinkModal);
