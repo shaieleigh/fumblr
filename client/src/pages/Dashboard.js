@@ -25,19 +25,15 @@ export default function Dashboard() {
 
 
   const dispatch = useDispatch();
-  // const lastItem = useSelector(state => state.blogsList.lastItemId);
-  // const allBlogs = useSelector(state => state.blogsList.allBlogs);
-  // const allUsers = useSelector(state => state.usersList);
+
 
   useEffect(() => {
     async function users() {
       const res = await fetch('/api/users')
       const data = await res.json();
-      console.log(data);
       dispatch(setAllUsers(data.users));
       dispatch(setAllBlogs(data.blogs));
       const lastItem = data.blogs[data.blogs.length - 1]
-      console.log('LAST ITEM', lastItem.id);
       dispatch(setLastItem(lastItem.id));
       return data;
     }
