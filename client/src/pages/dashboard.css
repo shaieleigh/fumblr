@@ -351,3 +351,7 @@ div.blogScroll {
 .textCreateText:focus {
   border: none;
 }
+
+.black {
+  color: black;
+}
