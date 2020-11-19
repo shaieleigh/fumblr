@@ -11,8 +11,8 @@ export default function Pages() {
     <>
     <Switch>
     <Route  path='/login' component={LoginPage} />
-    <Route path='/signup' component={SignUp} />
-    <Route path="/" component={Dashboard} />
+    <Route path='/' component={SignUp} />
+    <Route path="/dashboard" component={Dashboard} />
     </Switch>
     </>
   )

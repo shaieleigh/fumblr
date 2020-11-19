@@ -63,6 +63,10 @@ nav {
   background-color: rgba(0, 0, 0, .1)
 }
 
+.generalNav {
+  z-index: 2;
+}
+
 .pita {
   width: 100%;
 }
@@ -100,6 +104,7 @@ div.clickToAboutPage {
   position: absolute;
   left: 40px;
   top: 40%;
+  z-index: 2;
 }
 
 .dot {

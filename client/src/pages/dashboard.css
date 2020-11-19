@@ -181,7 +181,7 @@ div.blogScroll {
 
 .dashboardMain {
   height: 100%;
-  max-width: 540px;
+  max-width: 500px;
 }
 
 .dashboardNavBar {
@@ -235,10 +235,10 @@ div.blogScroll {
 }
 
 .sideBlurb {
-  width: 320px;
+  width: 260px;
   height: 1039px;
   background-color: rgb(34, 34, 34);
-  margin-left: 30px;
+  margin-left: 20px;
 }
 
 .homeButton {

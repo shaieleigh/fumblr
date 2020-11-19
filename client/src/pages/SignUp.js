@@ -12,6 +12,7 @@ export default function SignUp() {
   const [password, setPassword] = useState('');
   const [email, setEmail] = useState('');
   const [about, setAbout] = useState(false);
+  const [whatForm, setWhatForm] = useState('gettingStarted');
   const currentUserId = useSelector(state => state.auth.id)
   const dispatch = useDispatch();
 
@@ -25,6 +26,11 @@ export default function SignUp() {
 
   // }
 
+  const goToSignUp = (e) => {
+    e.preventDefault();
+    setWhatForm('signUp');
+  }
+
   if (currentUserId) return <Redirect to='/' />;
 
   return (
@@ -32,9 +38,11 @@ export default function SignUp() {
       <div className='pita'>
         <DotComponent text='Hello' />
         <div className='clickToAboutPage' onClick={e => setAbout(true)}></div>
-        <nav>
+        <nav className='generalNav'>
           <Link className='logo' to={currentUserId ? '/' : '/login'}>f</Link>
-          <Link to='/login' className='login'>Log in</Link>
+          {about?
+            <Link to='/login' className='login'>Log in</Link>
+          : null}
         </nav>
         <div className={about ? 'swivelUp celticAfter' : 'swivelUp'}>
           <div className='celtic'>
@@ -44,6 +52,13 @@ export default function SignUp() {
                 <p className='signupP'>Come for what you love.</p>
                 <p className='signupP'>Stay for what you discover.</p>
               </div>
+              { whatForm === 'gettingStarted'?
+                <div>
+                  <button onClick={goToSignUp} className='loginSignup'>Get Started</button>
+                  <Link to='/login' className='loginStart'>Log In</Link>
+                </div>
+              : null }
+              {whatForm === 'signUp'?
               <form onSubmit={handleSubmit}>
                 <input
                   label='Email'
@@ -68,6 +83,10 @@ export default function SignUp() {
                   onChange={e => setUsername(e.target.value)} />
                 <button className='loginSignup'>Sign up</button>
               </form>
+              : null }
+              { whatForm === 'login'?
+              <Redirect to='/login' />
+              : null }
             </div>
           </div>
           <div className='clickToAboutPage' onClick={e => setAbout(true)}><span className='whatIsTumblr'>What is Tumblr?</span></div>

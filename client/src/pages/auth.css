@@ -79,9 +79,9 @@ input:focus{
 }
 
 .loginSignup {
-  height: 50px;
+  height: 40px;
   width: 20%;
-  min-width: 300px;
+  min-width: 270px;
   margin-top: 10px;
   border-radius: 2px;
   border: none;
@@ -90,6 +90,27 @@ input:focus{
   font-weight: bold;
   font-size: 16px;
   cursor: pointer;
+}
+
+.loginStart {
+  height: 40px;
+  width: 20%;
+  min-width: 270px;
+  margin-top: 10px;
+  border-radius: 2px;
+  border: none;
+  background-color: white;
+  color: #444;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  font: 'helvetica Neue', Arial, sans-serif !important;
+  text-decoration: none;
+  text-align: center;
+  /* padding-top: 5px; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 div {

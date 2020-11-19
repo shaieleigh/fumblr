@@ -27,7 +27,7 @@ export default function LoginPage() {
     <div className='gothGirl'>
       <nav>
         <Link className='logo' to={currentUserId ? '/' : '/login'}>f</Link>
-        <Link to='/signup' className='signup'>Sign up</Link>
+        <Link to='/' className='signup'>Sign up</Link>
       </nav>
       <div className='loginBox'>
         <h1>fumblr</h1>
