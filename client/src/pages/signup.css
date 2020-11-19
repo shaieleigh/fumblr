@@ -57,9 +57,9 @@ nav {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-weight: bold;
   color: white;
-  padding: 10px;
+  padding: 7px;
   margin: 10px;
-  font-size: 15px;
+  font-size: 14px;
   background-color: rgba(0, 0, 0, .1)
 }
 
@@ -173,4 +173,19 @@ path {
 
 .signUpPage {
   z-index: 5;
+}
+
+.aboutSignUpButton {
+  color: green;
+  background-color: white;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 8px;
+  margin-right: 10px;
+  border-radius: 2px;
+}
+
+.buttonNav {
+  display: flex;
+  flex-direction: row;
 }

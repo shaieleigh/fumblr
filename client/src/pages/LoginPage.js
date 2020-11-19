@@ -21,13 +21,13 @@ export default function LoginPage() {
     e.preventDefault();
     dispatch(login('Demo-lition', 'password'))
   }
-  if (currentUserId) return <Redirect to='/' />;
+  if (currentUserId) return <Redirect to='/dashboard' />;
 
   return (
     <div className='gothGirl'>
       <nav>
-        <Link className='logo' to={currentUserId ? '/' : '/login'}>f</Link>
-        <Link to='/' className='signup'>Sign up</Link>
+        <Link className='logo' to={currentUserId ? '/dashboard' : '/login'}>f</Link>
+        <Link to='/signup' className='signup'>Sign up</Link>
       </nav>
       <div className='loginBox'>
         <h1>fumblr</h1>

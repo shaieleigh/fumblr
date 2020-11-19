@@ -5,7 +5,7 @@ import { setDot } from '../store/beforeAuth';
 
 export default function SetDot(props) {
   const dispatch = useDispatch();
-  console.log('props', props);
+  
   useEffect(() => {
 
     function handleSetDot() {
