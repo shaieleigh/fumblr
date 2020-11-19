@@ -1,5 +1,5 @@
 import React from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { setCreateImageModal,
           setCreateTextModal,
           setCreateQuoteModal,
@@ -11,13 +11,13 @@ import { setCreateImageModal,
 
 export default function CreateModal() {
   const dispatch = useDispatch();
-  const createTextModal = useSelector(state => state.createModalReducer.createTextModal);
-  const createImageModal = useSelector(state => state.createModalReducer.createImageModal);
-  const createQuoteModal = useSelector(state => state.createModalReducer.createQuoteModal);
-  const createLinkModal = useSelector(state => state.createModalReducer.createLinkModal);
-  const createVideoModal = useSelector(state => state.createModalReducer.createVideoModal);
-  const createChatModal = useSelector(state => state.createModalReducer.createChatModal);
-  const createAudioModal = useSelector(state => state.createModalReducer.createAudioModal);
+  // const createTextModal = useSelector(state => state.createModalReducer.createTextModal);
+  // const createImageModal = useSelector(state => state.createModalReducer.createImageModal);
+  // const createQuoteModal = useSelector(state => state.createModalReducer.createQuoteModal);
+  // const createLinkModal = useSelector(state => state.createModalReducer.createLinkModal);
+  // const createVideoModal = useSelector(state => state.createModalReducer.createVideoModal);
+  // const createChatModal = useSelector(state => state.createModalReducer.createChatModal);
+  // const createAudioModal = useSelector(state => state.createModalReducer.createAudioModal);
 
   const handleHideModal = (e) => {
     e.preventDefault();

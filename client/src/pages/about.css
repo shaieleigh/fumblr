@@ -53,11 +53,11 @@
 
 .flogoDiv {
   position: relative;
-  bottom: 92%;
+  bottom: 65%;
   cursor: pointer;
   z-index: 3;
 }
 
 .flogoDiv:hover {
-  cursor: pointer;
+  cursor: progress;
 }

@@ -1,6 +1,4 @@
 import React from 'react';
-import Cookies from 'js-cookie';
-import { setUser } from '../../store/auth';
 import { useDispatch } from 'react-redux';
 
 import { setCreateQuoteModal } from '../../store/createModals';

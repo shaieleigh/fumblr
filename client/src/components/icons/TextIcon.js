@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
 // import { Redirect } from 'react-router-dom';
-import Cookies from 'js-cookie';
-import { setUser } from '../../store/auth';
-import { useDispatch, useSelector } from 'react-redux';
+// import Cookies from 'js-cookie';
+// import { setUser } from '../../store/auth';
+import { useDispatch } from 'react-redux';
 
-import CreateTextBlog from '../CreateModal';
+// import CreateTextBlog from '../CreateModal';
 import { setCreateTextModal } from '../../store/createModals';
 
 

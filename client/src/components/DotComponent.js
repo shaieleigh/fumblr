@@ -1,5 +1,9 @@
 import React from 'react';
-import '../pages/signup.css'
+import '../pages/signup.css';
+
+import SetDot from './SetDot';
+
+
 
 class DotComponent extends React.Component {
   constructor(props) {
@@ -15,6 +19,7 @@ class DotComponent extends React.Component {
   }
 
   handleClickSignUp = e => {
+
     this.setState({
       signUpDot: true,
       aboutDot: false,
@@ -23,6 +28,7 @@ class DotComponent extends React.Component {
       orangeDot: false,
       giphyDot: false
     })
+
   }
 
   handleClickAbout = e => {
@@ -81,6 +87,7 @@ class DotComponent extends React.Component {
   }
 
   render() {
+  
     return (
       <div className='dotDiv'>
         <div className={this.state.signUpDot === true ? 'signUpDot dot dotActive' : 'signUpDot dot'} onClick={this.handleClickSignUp}></div>
@@ -89,6 +96,7 @@ class DotComponent extends React.Component {
         <div className={this.state.navyBlueDot === true ? 'navyBlueDot dot dotActive' : 'navyBlueDot dot'} onClick={this.handleClickNavyBlue}></div>
         <div className={this.state.orangeDot === true ? 'orangeDot dot dotActive' : 'orangeDot dot'} onClick={this.handleClickOrange}></div>
         <div className={this.state.giphyDot === true ? 'giphyDot dot dotActive' : 'giphyDot dot'} onClick={this.handleClickGiphy}></div>
+        <SetDot state={this.state} />
       </div>
     )
   }

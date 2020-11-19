@@ -2,6 +2,7 @@ import { createStore, compose, combineReducers, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
 import auth from './auth';
 import createModalReducer from './createModals';
+import dotReducer from './beforeAuth';
 import blogsList from './blogs';
 import usersList from './usersList';
 
@@ -9,7 +10,8 @@ const rootReducer = combineReducers({
   auth,
   blogsList,
   usersList,
-  createModalReducer
+  createModalReducer,
+  dotReducer
 });
 
 let storeEnhancer;

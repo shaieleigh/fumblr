@@ -30,7 +30,7 @@ export default function SignUp() {
   return (
     <>
       <div className='pita'>
-        <DotComponent />
+        <DotComponent text='Hello' />
         <div className='clickToAboutPage' onClick={e => setAbout(true)}></div>
         <nav>
           <Link className='logo' to={currentUserId ? '/' : '/login'}>f</Link>
