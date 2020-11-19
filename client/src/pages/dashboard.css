@@ -200,6 +200,11 @@ div.blogScroll {
   background-color: rgba(0, 0, 0, 0);
 }
 
+.dashNavButtons:hover {
+  margin-bottom: 5px;
+  /* bottom: 5px; */
+}
+
 .dashboardMain, .profPicDBScroll {
   margin: 0px 5px;
 }
@@ -207,7 +212,6 @@ div.blogScroll {
 .blog {
   box-sizing: border-box;
   width: 100%;
-
   color: rgb( 103, 255, 56 );
   margin-bottom: 15px;
   background-color: rgb(34, 34, 34);
@@ -263,7 +267,7 @@ div.blogScroll {
   z-index: 1;
   width: 440px;
   min-height: 99px;
-  background-color: aliceblue;
+  background-color: white;
   /* position: absolute; */
   /* bottom: 5px; */
   /* top: 200px; */
@@ -281,4 +285,69 @@ div.blogScroll {
   position: absolute;
   left: -80px;
 
+}
+
+.createMUserName {
+  font-weight: bold;
+  align-self: flex-start;
+  font-size: 12px;
+  padding: 15px;
+}
+
+.formNavBar {
+  display: flex;
+  flex-direction: row;
+  align-items: space-between;
+  justify-content: space-between;
+  width: 100%;
+  border-top: .25px solid rgb(240, 240, 240);
+}
+
+.createFormButtons {
+  margin: 15px;
+  padding: 5px;
+  font-size: 12px;
+  font-weight: bold;
+  border-radius: 2px;
+  color: white;
+}
+
+.createFormButtons-Post {
+  min-width: 60px;
+  background-color: #00b8ff;
+}
+
+.createFormButtons-Close {
+  background-color: #9da6af;
+}
+
+.titleCreateText {
+  font-size: 36px;
+  color: black;
+  font-family: 'Gibson', 'Helvetica Neue', 'Helvetica';
+  border: none;
+  align-self: flex-start;
+}
+
+.titleCreateText::placeholder {
+  color: rgb(80, 80, 80)
+}
+
+.textCreateText {
+  font-size: 12px;
+  border: none;
+  width: 100%;
+  min-height: 120px;
+  padding: 15px;
+  box-sizing: border-box;
+  overflow: hidden;
+  resize: none;
+  outline: none;
+  line-height: 20px;
+  height: auto !important;
+  align-items: flex-start;
+}
+
+.textCreateText:focus {
+  border: none;
 }
