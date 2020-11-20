@@ -21,6 +21,7 @@ export default function LoginPage() {
     e.preventDefault();
     dispatch(login('Demo-lition', 'password'))
   }
+  
   if (currentUserId) return <Redirect to='/dashboard' />;
 
   return (

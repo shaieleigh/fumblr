@@ -18,6 +18,12 @@ class DotComponent extends React.Component {
     }
   }
 
+  componentDidMount() {
+    if(this.props.about === 'about') {
+      this.handleClickAbout();
+    }
+  }
+
   handleClickSignUp = e => {
 
     this.setState({
@@ -86,8 +92,10 @@ class DotComponent extends React.Component {
     })
   }
 
+
   render() {
-  
+    console.log('props', this.props)
+
     return (
       <div className='dotDiv'>
         <div className={this.state.signUpDot === true ? 'signUpDot dot dotActive' : 'signUpDot dot'} onClick={this.handleClickSignUp}></div>

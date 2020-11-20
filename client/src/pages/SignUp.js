@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { signup } from '../store/auth';
 import { Redirect, Link } from 'react-router-dom';
@@ -6,6 +6,7 @@ import { Redirect, Link } from 'react-router-dom';
 import DotComponent from '../components/DotComponent';
 import About from './About'
 import { login } from '../store/auth';
+import setDot from '../store/beforeAuth'
 
 import './auth.css';
 import './signup.css';
@@ -14,12 +15,18 @@ export default function SignUp() {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [email, setEmail] = useState('');
-  const [about, setAbout] = useState(false);
   const [whatForm, setWhatForm] = useState('gettingStarted');
   const dot = useSelector(state => state.dotReducer.dot);
+  const [about, setAbout] = useState('');
   const currentUserId = useSelector(state => state.auth.id)
   const dispatch = useDispatch();
-  console.log('dot', dot);
+  console.log('dot', dot)
+  console.log('about', about)
+
+  useEffect(() => {
+    setAbout(dot);
+
+  }, [dot])
 
   const handleSubmit = e => {
     e.preventDefault();
@@ -35,6 +42,12 @@ export default function SignUp() {
     dispatch(login('Demo-lition', 'password'))
   }
 
+  const handleCurtainUp = (e) => {
+    e.preventDefault();
+    setAbout('about');
+    dispatch(setDot('about'));
+  }
+
   const goToSignUp = (e) => {
     e.preventDefault();
     setWhatForm('signUp');
@@ -45,19 +58,19 @@ export default function SignUp() {
   return (
     <>
       <div className='pita'>
-        <DotComponent text='Hello' />
-        <div className='clickToAboutPage' onClick={e => setAbout(true)}></div>
+        <DotComponent about={about} />
+        <div className='clickToAboutPage' onClick={e => setAbout('about')}></div>
         <nav className='generalNav'>
           <Link className='logo' to={currentUserId ? '/' : '/login'}>f</Link>
           <div className='buttonNav'>
-            {dot === 'about' || whatForm === 'signUp' ?
+            {about === 'about' || dot === 'about' || whatForm === 'signUp' ?
               <Link to='/login' className='login'>Log in</Link>
               : null}
-            {dot === 'about' ? <button className='aboutSignUpButton'>Sign Up</button>
+            {about ==='about' || dot === 'about' ? <button className='aboutSignUpButton'>Sign Up</button>
             : null }
           </div>
         </nav>
-        <div className={dot === 'about' ? 'swivelUp celticAfter' : 'swivelUp'}>
+        <div className={ about==='about' || dot === 'about' ? 'swivelUp celticAfter' : 'swivelUp'}>
           <div className='celtic'>
             <div className='signUpPage'>
               <h1>fumblr</h1>
@@ -113,7 +126,7 @@ export default function SignUp() {
               : null }
             </div>
           </div>
-          <div className='clickToAboutPage' onClick={e => setAbout(true)}><span className='whatIsTumblr'>What is Tumblr?</span></div>
+          <div className='clickToAboutPage' onClick={handleCurtainUp}><span className='whatIsTumblr'>What is Tumblr?</span></div>
         </div>
         <div className='aboutPage'>
           <About />
