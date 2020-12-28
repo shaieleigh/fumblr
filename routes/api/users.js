@@ -8,14 +8,6 @@ const { generateToken } = require("../util/auth");
 const {
   jwtConfig: { expiresIn },
 } = require("../../config");
-const { s3,
-  singlePublicFileUpload,
-  multiplePublicFileUpload,
-  singlePrivateFileUpload,
-  multiplePrivateFileUpload,
-  retrievePrivateFile,
-  singleMulterUpload,
-  multipleMulterUpload } = require('../util/aws')
 
 const validateSignup = [
   check("username", "must be between 5 and 70 characters")

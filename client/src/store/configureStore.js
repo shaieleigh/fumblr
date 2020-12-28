@@ -5,13 +5,15 @@ import createModalReducer from './createModals';
 import dotReducer from './beforeAuth';
 import blogsList from './blogs';
 import usersList from './usersList';
+import createBlog from './createBlogs';
 
 const rootReducer = combineReducers({
   auth,
   blogsList,
   usersList,
   createModalReducer,
-  dotReducer
+  dotReducer,
+  createBlog,
 });
 
 let storeEnhancer;

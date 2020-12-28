@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { setCreateImageModal,
           setCreateTextModal,
@@ -7,7 +7,7 @@ import { setCreateImageModal,
           setCreateVideoModal,
           setCreateAudioModal,
           setCreateChatModal } from '../store/createModals';
-
+import Cookies from 'js-cookie';
 import CreateTextForm from './forms/CreateTextForm';
 import CreateImageForm from './forms/CreateImageForm';
 import CreateQuoteForm from './forms/CreateQuoteForm';
@@ -19,6 +19,7 @@ import CreateAudioForm from './forms/CreateAudioForm';
 export default function CreateModal() {
   const dispatch = useDispatch();
   const username = useSelector(state => state.auth.username)
+  const blog = useSelector(state => state.createBlog)
   const createTextModal = useSelector(state => state.createModalReducer.createTextModal);
   const createImageModal = useSelector(state => state.createModalReducer.createImageModal);
   const createQuoteModal = useSelector(state => state.createModalReducer.createQuoteModal);
@@ -26,6 +27,15 @@ export default function CreateModal() {
   const createVideoModal = useSelector(state => state.createModalReducer.createVideoModal);
   const createChatModal = useSelector(state => state.createModalReducer.createChatModal);
   const createAudioModal = useSelector(state => state.createModalReducer.createAudioModal);
+
+
+  useEffect(() => {
+    if(createAudioModal || createChatModal || createTextModal ||
+      createImageModal || createQuoteModal || createLinkModal || createVideoModal){
+        document.body.style.overflow = 'hidden';
+      }
+
+  }, [username])
 
   const handleHideModal = (e) => {
     e.preventDefault();
@@ -36,6 +46,23 @@ export default function CreateModal() {
     dispatch(setCreateVideoModal(false));
     dispatch(setCreateChatModal(false));
     dispatch(setCreateAudioModal(false));
+    document.body.style.overflow = 'scroll';
+  }
+
+  const handlePost = async() => {
+    if(blog.text || blog.title){
+      console.log('blog', blog);
+      await fetch('/api/blogs',
+        {
+          method: 'POST',
+          headers: {
+            "Content-Type": 'application/json',
+            'XSRF-TOKEN': Cookies.get('XSRF-TOKEN'),
+          },
+          body: JSON.stringify({ blog })
+        }
+      )
+    }
   }
 
   return (
@@ -54,7 +81,7 @@ export default function CreateModal() {
           {createAudioModal? <CreateAudioForm /> : null}
           <div className='formNavBar'>
             <button onClick={handleHideModal} className='createFormButtons createFormButtons-Close'>Close</button>
-            <button className='createFormButtons createFormButtons-Post'>Post</button>
+            <button className='createFormButtons createFormButtons-Post' onClick={handlePost}>Post</button>
           </div>
         </div>
       </div>
