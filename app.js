@@ -1,6 +1,7 @@
 const cors = require('cors');
 const createError = require('http-errors');
-const cookieParser = require('cookie-parser')
+const bodyParser = require('body-parser');
+const cookieParser = require('cookie-parser');
 const express = require('express');
 const helmet = require('helmet');
 const path = require('path');
@@ -16,7 +17,7 @@ app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));
-
+app.use(bodyParser.json());
 app.use(cookieParser())
 
 
@@ -56,6 +57,7 @@ if (process.env.NODE_ENV === "production") {
 
 app.use(function(err, _req, _res, next) {
   console.log('404 message', err.message, err.stack)
+  
   next(createError(404));
 });
 

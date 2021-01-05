@@ -1,6 +1,8 @@
+import Cookies from 'js-cookie';
+
 const CREATE_TEXT = 'CREATE_TEXT';
 const CREATE_TEXT_TITLE = 'CREATE_TEXT_TITLE';
-const CREATE_IMAGE = 'CREATE_IMAGE';
+// const CREATE_IMAGE = 'CREATE_IMAGE';
 
 const initialState = {
   title: '',
@@ -19,6 +21,26 @@ export const createTextTitleBlog = (textBlogTitle) => {
     type: CREATE_TEXT_TITLE,
     textBlogTitle
   }
+}
+
+export const createBlogGeneral = async(blog) => {
+  console.log('blog inside createBlogGeneral', blog);
+  console.log('token', Cookies.get('session'))
+  const res = await fetch('/api/blogs/', {
+    method: 'POST',
+    HEADERS: {
+      'Content-Type': 'application/json',
+      'XSRF-TOKEN': Cookies.get('XSRF-TOKEN')
+    },
+    body: JSON.stringify({ blog })
+  })
+  if(!res.ok){
+    console.error(res);
+  }
+  const data = await res.json();
+  console.log('data', data);
+  return res;
+
 }
 
 export default function createBlog(state=initialState, action) {

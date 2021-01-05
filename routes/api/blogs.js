@@ -1,4 +1,10 @@
 const express = require('express');
+const csrfProtection = require("csurf")({ cookie: {
+      secure: process.env.NODE_ENV === "production",
+      sameSite: process.env.NODE_ENV === "production",
+      httpOnly: true,
+      }
+    });
 
 const { Blogs } = require('../../db/models');
 
@@ -14,7 +20,8 @@ const { Blogs } = require('../../db/models');
 const router = express.Router();
 
 router.post('/', async function (req, res) {
-  let blog = await Blogs.findAll();
+
   console.log('req', req);
   console.log('res', res);
+  return res;
 })

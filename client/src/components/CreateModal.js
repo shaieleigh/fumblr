@@ -7,7 +7,7 @@ import { setCreateImageModal,
           setCreateVideoModal,
           setCreateAudioModal,
           setCreateChatModal } from '../store/createModals';
-import Cookies from 'js-cookie';
+// import Cookies from 'js-cookie';
 import CreateTextForm from './forms/CreateTextForm';
 import CreateImageForm from './forms/CreateImageForm';
 import CreateQuoteForm from './forms/CreateQuoteForm';
@@ -15,6 +15,7 @@ import CreateLinkForm from './forms/CreateLinkForm';
 import CreateVideoForm from './forms/CreateVideoForm';
 import CreateChatForm from './forms/CreateChatForm';
 import CreateAudioForm from './forms/CreateAudioForm';
+import { createBlogGeneral } from '../store/createBlogs';
 
 export default function CreateModal() {
   const dispatch = useDispatch();
@@ -49,19 +50,10 @@ export default function CreateModal() {
     document.body.style.overflow = 'scroll';
   }
 
-  const handlePost = async() => {
+  const handlePost = () => {
     if(blog.text || blog.title){
       console.log('blog', blog);
-      await fetch('/api/blogs',
-        {
-          method: 'POST',
-          headers: {
-            "Content-Type": 'application/json',
-            'XSRF-TOKEN': Cookies.get('XSRF-TOKEN'),
-          },
-          body: JSON.stringify({ blog })
-        }
-      )
+      createBlogGeneral({blog})
     }
   }
 
