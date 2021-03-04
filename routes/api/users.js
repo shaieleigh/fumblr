@@ -19,7 +19,7 @@ const validateSignup = [
     .exists()
     .isLength({ min: 6, max: 70 }),
 ];
-
+   
 const router = express.Router();
 
 router.get('/', asyncHandler(async function (_req, res, _next) {

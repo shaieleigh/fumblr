@@ -25,14 +25,15 @@ export const createTextTitleBlog = (textBlogTitle) => {
 
 export const createBlogGeneral = async(blog) => {
   console.log('blog inside createBlogGeneral', blog);
-  console.log('token', Cookies.get('session'))
-  const res = await fetch('/api/blogs/', {
-    method: 'POST',
-    HEADERS: {
+  console.log('token', Cookies.get('XSRF-TOKEN'))
+  let post = blog.blog;
+  const res = await fetch('/api/blogs/text', {
+    method: "POST",
+    headers: {
       'Content-Type': 'application/json',
       'XSRF-TOKEN': Cookies.get('XSRF-TOKEN')
     },
-    body: JSON.stringify({ blog })
+    body: JSON.stringify({ post })
   })
   if(!res.ok){
     console.error(res);
@@ -40,7 +41,6 @@ export const createBlogGeneral = async(blog) => {
   const data = await res.json();
   console.log('data', data);
   return res;
-
 }
 
 export default function createBlog(state=initialState, action) {

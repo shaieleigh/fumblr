@@ -37,7 +37,7 @@ export default function CreateModal() {
       }
 
   }, [username])
-
+   
   const handleHideModal = (e) => {
     e.preventDefault();
     dispatch(setCreateTextModal(false));

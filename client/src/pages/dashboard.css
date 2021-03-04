@@ -149,7 +149,6 @@ span {
   fill: rgba(0, 207, 53, 1);
   width: 40px;
   height: 40px;
-  /* background-color: aliceblue; */
 
 }
 
@@ -157,8 +156,6 @@ div.blogScroll {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-
-  /* width: 100%; */
 }
 
 .dashboardIcons {
@@ -268,9 +265,6 @@ div.blogScroll {
   width: 440px;
   min-height: 99px;
   background-color: white;
-  /* position: absolute; */
-  /* bottom: 5px; */
-  /* top: 200px; */
   border-radius: 3px;
 }
 

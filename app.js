@@ -57,7 +57,7 @@ if (process.env.NODE_ENV === "production") {
 
 app.use(function(err, _req, _res, next) {
   console.log('404 message', err.message, err.stack)
-  
+
   next(createError(404));
 });
 
