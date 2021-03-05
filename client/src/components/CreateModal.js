@@ -13,19 +13,14 @@ import { createBlogGeneral } from '../store/createBlogs';
 
 export default function CreateModal() {
   const dispatch = useDispatch();
-  const username = useSelector(state => state.auth.username)
-  const blog = useSelector(state => state.createBlog)
+  const username = useSelector(state => state.auth.username);
+  const blog = useSelector(state => state.createBlog);
   const createModal = useSelector(state => state.createModalReducer.createModal);
-  // const createImageModal = useSelector(state => state.createModalReducer.createImageModal);
-  // const createQuoteModal = useSelector(state => state.createModalReducer.createQuoteModal);
-  // const createLinkModal = useSelector(state => state.createModalReducer.createLinkModal);
-  // const createVideoModal = useSelector(state => state.createModalReducer.createVideoModal);
-  // const createChatModal = useSelector(state => state.createModalReducer.createChatModal);
-  // const createAudioModal = useSelector(state => state.createModalReducer.createAudioModal);
+  const userId = useSelector(state => state.auth.id);
 
 
   useEffect(() => {
-    if(createModal != 'none'){
+    if(createModal !== 'none'){
         document.body.style.overflow = 'hidden';
       }
 
@@ -39,9 +34,9 @@ export default function CreateModal() {
   }
 
   const handlePost = () => {
-    if(blog.text || blog.title){
+    if(blog.title ){
       console.log('blog', blog);
-      createBlogGeneral({blog})
+      createBlogGeneral({blog, userId})
     }
     }
   console.log('create Modal', createModal);

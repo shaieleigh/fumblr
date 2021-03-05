@@ -22,20 +22,20 @@ const router = express.Router();
 
 router.post('/text', async function (req, res, next) {
   console.log('req', req.body);
-  console.log('req header xsrf', req.headers)
+  console.log('req.body', req.body);
   const textBody = req.body.post;
   // console.log('req.file', req.file);
   // textBody.mediaUrl = await singlePublicFileUpload(req.file);
   // console.log('textBody.mediaUrl', textBody.mediaUrl);
   console.log('textBody', textBody);
 
-  let user =
 
-  console.log('user', user)
+
+  console.log('user', req.body.userId)
   const createdBlog =  await Blogs.create({
     blog: textBody.text,
     blogType: 'text',
-    userId: user,
+    userId: req.body.userId,
     title: textBody.title
   });
   console.log('createdBlogs', createdBlog);

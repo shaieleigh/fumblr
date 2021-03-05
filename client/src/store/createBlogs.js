@@ -27,13 +27,14 @@ export const createBlogGeneral = async(blog) => {
   console.log('blog inside createBlogGeneral', blog);
   console.log('token', Cookies.get('XSRF-TOKEN'))
   let post = blog.blog;
+  let userId = blog.userId
   const res = await fetch('/api/blogs/text', {
     method: "POST",
     headers: {
       'Content-Type': 'application/json',
       'XSRF-TOKEN': Cookies.get('XSRF-TOKEN')
     },
-    body: JSON.stringify({ post })
+    body: JSON.stringify({ post, userId })
   })
   if(!res.ok){
     console.error(res);
