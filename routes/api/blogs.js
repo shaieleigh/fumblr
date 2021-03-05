@@ -7,7 +7,7 @@ const csrfProtection = require("csurf")({ cookie: {
     });
 
 const { Blogs } = require('../../db/models');
-const { requireUser } = require('../util/auth');
+const { requireUser, getCurrentUser } = require('../util/auth');
 
 const { s3,
   singlePublicFileUpload,
@@ -20,14 +20,21 @@ const { s3,
 
 const router = express.Router();
 
-router.post('/text', async function (req, res) {
+router.post('/text', async function (req, res, next) {
   console.log('req', req.body);
   const textBody = req.body.post;
   // console.log('req.file', req.file);
   // textBody.mediaUrl = await singlePublicFileUpload(req.file);
   // console.log('textBody.mediaUrl', textBody.mediaUrl);
   console.log('textBody', textBody);
-  const createdBlog = new Blogs(textBody);
+  
+  console.log('user', user)
+  const createdBlog =  await Blogs.create({
+    blog: textBody.text,
+    blogType: 'text',
+    userId: user,
+    title: textBody.title
+  });
   console.log('createdBlogs', createdBlog);
 })
 

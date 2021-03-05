@@ -36,8 +36,8 @@ export default function CreateModal() {
         document.body.style.overflow = 'hidden';
       }
 
-  }, [username])
-   
+  }, [username, createTextModal, createImageModal, createQuoteModal, createLinkModal, createVideoModal, createChatModal, createAudioModal])
+
   const handleHideModal = (e) => {
     e.preventDefault();
     dispatch(setCreateTextModal(false));

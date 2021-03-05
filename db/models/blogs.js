@@ -22,7 +22,7 @@ module.exports = (sequelize, DataTypes) => {
         isUrl: true,
       }
     },
-    title: {
+    title: {   
       type: DataTypes.STRING,
       validates: {
         len: [3, 50]
