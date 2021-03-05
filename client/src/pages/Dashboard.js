@@ -14,17 +14,10 @@ import '../assets/css/dashboard.css'
 
 
 export default function Dashboard() {
+  const dispatch = useDispatch();
   const currentUserId = useSelector(state => state.auth.id);
   const createModal = useSelector(state => state.createModalReducer.createModal);
-  const createImageModal = useSelector(state => state.createModalReducer.createImageModal);
-  const createQuoteModal = useSelector(state => state.createModalReducer.createQuoteModal);
-  const createLinkModal = useSelector(state => state.createModalReducer.createLinkModal);
-  const createVideoModal = useSelector(state => state.createModalReducer.createVideoModal);
-  const createChatModal = useSelector(state => state.createModalReducer.createChatModal);
-  const createAudioModal = useSelector(state => state.createModalReducer.createAudioModal);
 
-
-  const dispatch = useDispatch();
 
 
   useEffect(() => {

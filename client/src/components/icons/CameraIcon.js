@@ -12,7 +12,7 @@ export default function CameraIcon() {
     e.preventDefault();
     dispatch(setCreateModal('image'));
   }
-
+   
   return (
     <>
       <button className='dashNavButtons' onClick={handleShowModal}>

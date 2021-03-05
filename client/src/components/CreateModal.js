@@ -55,7 +55,7 @@ export default function CreateModal() {
           {createModal === 'chat'? <CreateChatForm /> : null}
           {createModal ==='audio'? <CreateAudioForm /> : null}
           <div className='formNavBar'>
-            <button onClick={handleHideModal} className='createFormButtons createFormButtons-Close'>Close</button>
+            <button onClick={handleHideModal} className='createFormButtons    createFormButtons-Close'>Close</button>
             <button className='createFormButtons createFormButtons-Post' onClick={handlePost}>Post</button>
           </div>
         </div>
