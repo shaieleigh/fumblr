@@ -1,7 +1,7 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
 
-import { setCreateVideoModal } from '../../store/createModals';
+import { setCreateModal } from '../../store/createModals';
 
 
 export default function VideoIcon() {
@@ -9,7 +9,7 @@ export default function VideoIcon() {
 
   const handleShowModal = (e) => {
     e.preventDefault();
-    dispatch(setCreateVideoModal(true));
+    dispatch(setCreateModal('video'));
   }
 
 

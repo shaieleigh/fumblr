@@ -3,7 +3,7 @@ import React from 'react';
 // import { setUser } from '../../store/auth';
 import { useDispatch } from 'react-redux';
 
-import { setCreateChatModal } from '../../store/createModals';
+import { setCreateModal } from '../../store/createModals';
 
 
 export default function ChatIcon() {
@@ -11,7 +11,7 @@ export default function ChatIcon() {
 
   const handleShowModal = (e) => {
     e.preventDefault();
-    dispatch(setCreateChatModal(true));
+    dispatch(setCreateModal('chat'));
   }
 
 

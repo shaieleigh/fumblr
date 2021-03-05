@@ -1,7 +1,7 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
 
-import { setCreateLinkModal } from '../../store/createModals';
+import { setCreateModal } from '../../store/createModals';
 
 
 
@@ -10,7 +10,7 @@ export default function LinkIcon() {
 
   const handleShowModal = (e) => {
     e.preventDefault();
-    dispatch(setCreateLinkModal(true));
+    dispatch(setCreateModal('link'));
   }
 
 

@@ -5,7 +5,7 @@ import React from 'react';
 import { useDispatch } from 'react-redux';
 
 // import CreateTextBlog from '../CreateModal';
-import { setCreateTextModal } from '../../store/createModals';
+import { setCreateModal } from '../../store/createModals';
 
 
 
@@ -15,7 +15,7 @@ export default function TextIcon() {
 
   const showModal = (e) => {
     e.preventDefault();
-    dispatch(setCreateTextModal(true));
+    dispatch(setCreateModal('text'));
   }
 
 

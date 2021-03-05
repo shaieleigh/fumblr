@@ -1,7 +1,7 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
 
-import { setCreateQuoteModal } from '../../store/createModals';
+import { setCreateModal } from '../../store/createModals';
 
 
 
@@ -10,7 +10,7 @@ export default function QuoteIcon() {
 
   const handleShowModal = (e) => {
     e.preventDefault();
-    dispatch(setCreateQuoteModal(true));
+    dispatch(setCreateModal('quote'));
   }
 
 

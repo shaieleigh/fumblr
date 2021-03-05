@@ -3,7 +3,7 @@ import React from 'react';
 // import { setUser } from '../../store/auth';
 import { useDispatch } from 'react-redux';
 
-import { setCreateAudioModal } from '../../store/createModals';
+import { setCreateModal } from '../../store/createModals';
 
 
 
@@ -12,7 +12,7 @@ export default function AudioIcon() {
 
   const handleShowModal = (e) => {
     e.preventDefault();
-    dispatch(setCreateAudioModal(true));
+    dispatch(setCreateModal('audio'));
   }
 
   return (

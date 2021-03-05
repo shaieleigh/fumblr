@@ -1,7 +1,7 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
 
-import { setCreateImageModal } from '../../store/createModals';
+import { setCreateModal } from '../../store/createModals';
 
 
 
@@ -10,7 +10,7 @@ export default function CameraIcon() {
 
   const handleShowModal = (e) => {
     e.preventDefault();
-    dispatch(setCreateImageModal(true));
+    dispatch(setCreateModal('image'));
   }
 
   return (

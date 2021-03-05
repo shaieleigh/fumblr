@@ -15,7 +15,7 @@ import './dashboard.css';
 
 export default function Dashboard() {
   const currentUserId = useSelector(state => state.auth.id);
-  const createTextModal = useSelector(state => state.createModalReducer.createTextModal);
+  const createModal = useSelector(state => state.createModalReducer.createModal);
   const createImageModal = useSelector(state => state.createModalReducer.createImageModal);
   const createQuoteModal = useSelector(state => state.createModalReducer.createQuoteModal);
   const createLinkModal = useSelector(state => state.createModalReducer.createLinkModal);
@@ -55,8 +55,7 @@ export default function Dashboard() {
         <BlogScroll />
         <SideBlurb />
       </div>
-      {createTextModal || createImageModal || createQuoteModal || createLinkModal || createVideoModal || createAudioModal || createChatModal
-       ? <CreateModal /> : null }
+      {createModal != 'none' ? <CreateModal /> : null }
     </>
   )
 }
