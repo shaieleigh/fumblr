@@ -34,7 +34,7 @@ export default function CreateModal() {
   }
 
   const handlePost = () => {
-    if(blog.title ){
+    if(userId){
       console.log('blog', blog);
       createBlogGeneral({blog, userId})
     }

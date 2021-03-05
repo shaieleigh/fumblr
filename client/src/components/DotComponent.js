@@ -1,5 +1,5 @@
 import React from 'react';
-import '../pages/signup.css';
+import '../assets/css/signup.css';
 
 import SetDot from './SetDot';
 

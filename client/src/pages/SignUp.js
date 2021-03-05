@@ -8,8 +8,8 @@ import About from './About'
 import { login } from '../store/auth';
 import setDot from '../store/beforeAuth'
 
-import './auth.css';
-import './signup.css';
+import '../assets/css/auth.css';
+import '../assets/css/signup.css';
 
 export default function SignUp() {
   const [username, setUsername] = useState('');

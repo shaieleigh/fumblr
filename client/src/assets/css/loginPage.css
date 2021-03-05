@@ -1,7 +1,7 @@
 
 
 .gothGirl {
-  background-image: url(./evilgothgirl.jpg);
+  background-image: url(../img/evilgothgirl.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
@@ -12,5 +12,3 @@
 .loginBox {
   position: relative;
 }
-
-

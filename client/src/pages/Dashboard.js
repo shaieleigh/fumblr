@@ -9,7 +9,7 @@ import PersonalModalButton from '../components/PersonalModalButton';
 import CreateModal from '../components/CreateModal';
 import { setAllUsers } from '../store/usersList';
 import { setLastItem, setAllBlogs } from '../store/blogs';
-import './dashboard.css';
+import '../assets/css/dashboard.css'
 
 
 

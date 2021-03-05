@@ -2,9 +2,8 @@ import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { login } from '../store/auth';
 import { Redirect, Link } from 'react-router-dom';
-import './auth.css';
-import './loginPage.css';
-
+import '../assets/css/auth.css';
+import '../assets/css/loginPage.css';
 
 
 
@@ -21,7 +20,7 @@ export default function LoginPage() {
     e.preventDefault();
     dispatch(login('Demo-lition', 'password'))
   }
-  
+
   if (currentUserId) return <Redirect to='/dashboard' />;
 
   return (
