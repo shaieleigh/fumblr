@@ -48,25 +48,25 @@
 /* _____________________ */
 
 .imgFormIcon2 {
-  fill: grey;
+  fill: #989898;
   cursor: pointer;
 }
 
 .imgFormIconInst {
-  color: grey;
-  fill: grey;
+  color: #989898;
+  fill:  #989898;
   cursor: pointer;
 }
 
 .imgUpload {
   cursor: pointer;
-  fill: grey;
+  fill:  #989898;
   position: absolute;
   left: -210px;
 }
 
 input {
-  fill: grey;
+  fill: #989898;
   cursor: pointer;
 }
 
@@ -77,7 +77,7 @@ input {
   height: 100%;
 }
 
-g {
+g.imgFormIcon {
   stroke:none;
   animation: none;
   animation-fill-mode: none;
