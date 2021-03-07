@@ -13,7 +13,7 @@ export default function CreateImageForm() {
 
   const handleImgFile = (e) => {
     e.preventDefault();
-    const image = e.target.files[0].webkitRelativePath;
+    const image = e.target.files[0];
     let img = image['get webkitRelativePath'];
     console.log('img', img);
     console.log(e.target.files[0]);
