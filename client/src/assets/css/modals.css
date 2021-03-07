@@ -13,10 +13,12 @@
 .imgFile, .imgLink {
   height: 100%;
   width: 100%;
+  cursor: pointer;
 }
 
 .imgFile {
   border-right: 1px solid #cfcfcf;
+  cursor: pointer;
 }
 
 /* below two copied from https://coderwall.com/p/uer3ow/total-input-type-file-style-control-with-pure-css  to get rid of the input type file default style */
@@ -26,10 +28,11 @@
     position: relative;
     width: 100%;
     height: 100%;
+    cursor: pointer;
 }
 
 .fileContainer [type=file] {
-    cursor: inherit;
+    cursor: pointer;
     display: block;
     font-size: 999px;
     filter: alpha(opacity=0);
@@ -46,8 +49,37 @@
 
 .imgFormIcon2 {
   fill: grey;
+  cursor: pointer;
 }
 
 .imgFormIconInst {
   color: grey;
+  fill: grey;
+  cursor: pointer;
+}
+
+.imgUpload {
+  cursor: pointer;
+  fill: grey;
+  position: absolute;
+  left: -210px;
+}
+
+input {
+  fill: grey;
+  cursor: pointer;
+}
+
+.imgFormIconFlex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+g {
+  stroke:none;
+  animation: none;
+  animation-fill-mode: none;
+  opacity: 1;
 }

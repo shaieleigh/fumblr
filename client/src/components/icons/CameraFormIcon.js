@@ -1,13 +1,16 @@
 import React from 'react';
 import '../../assets/css/modals.css'
+import CreateImageForm from '../forms/CreateImageForm';
 
 export default function CameraFormIcon() {
   return (
     <>
-      <svg className='imageFormIcon' viewBox="0 0 17 15" width="40" height="35" fill="var(--red)">
-        <path className='imgFormIcon2' d="M14.6 1h-2.7l-.6-1h-6l-.6 1H2.4C1.1 1 0 2 0 3.3v9.3C0 13.9 1.1 15 2.4 15h12.2c1.3 0 2.4-1.1 2.4-2.4V3.3C17 2 15.9 1 14.6 1zM8.3 13.1c-2.9 0-5.2-2.3-5.2-5.1s2.3-5.1 5.2-5.1c2.9 0 5.2 2.3 5.2 5.1s-2.3 5.1-5.2 5.1zm5.9-8.3c-.6 0-1.1-.5-1.1-1.1 0-.6.5-1.1 1.1-1.1s1.1.5 1.1 1.1c0 .6-.5 1.1-1.1 1.1zm-10 3.1c0 1.2.5 2.2 1.3 3 0-.2 0-.4-.1-.6 0-2.2 1.8-4 4.1-4 1.1 0 2 .4 2.8 1.1-.3-2-2-3.4-4-3.4-2.2-.1-4.1 1.7-4.1 3.9z"></path>
-      </svg>
-      <p className='imgFormIconInst'>Photo</p>
+      <div className='imgFormIconFlex'>
+        <svg className='imgFormIcon' viewBox="0 0 24 24" width="50" height="50" fill="rgba(var(--black), 0.40)"><g fillRule="evenodd" className='imgFormIcon'><path d="M15.891 5.055l-.639-.998H9.724l-.644.998H7.996v1.943h-2v2H2.98l.004 8.752c0 1.496 1.197 3.247 2.623 3.247H19.37c1.426 0 2.639-1.751 2.639-3.247V7.277c0-1.496-1.213-2.222-2.639-2.222h-3.478zm-3.349 13.764c-3.11 0-5.631-2.648-5.631-5.915 0-3.265 2.521-5.914 5.631-5.914 3.11 0 5.632 2.649 5.632 5.914 0 3.267-2.522 5.915-5.632 5.915zM18.871 9c-.678 0-1.227-.577-1.227-1.288 0-.711.549-1.288 1.227-1.288.676 0 1.227.577 1.227 1.288 0 .711-.551 1.288-1.227 1.288z" className='imgFormIcon2'></path><path d="M4.984 6.02h2v-2h-2v-2h-2l-.01 2H.983v2h1.98l-.01 2h2.03v-2z" className='imgFormIcon2'></path><path d="M12.559 8.523a4.417 4.417 0 00-4.418 4.416c0 1.281.549 2.43 1.419 3.237a4.364 4.364 0 01-.056-.66 4.417 4.417 0 014.418-4.418c1.158 0 2.21.45 2.998 1.18a4.413 4.413 0 00-4.361-3.755" className='imgFormIcon2'></path></g></svg>
+        <p className='imgFormIconInst'>Upload photos</p>
+      </div>
     </>
   )
 }
+// imgFormIcon svg
+// path imgFormIcon2
