@@ -14,8 +14,6 @@ export default function CreateImageForm() {
   const handleImgFile = (e) => {
     e.preventDefault();
     const image = e.target.files[0];
-    let img = image['get webkitRelativePath'];
-    console.log('img', img);
     console.log(e.target.files[0]);
     setWhichImgForm('ImgFile');
     let file = document.getElementsByClassName('ImgFileUpload');
@@ -23,6 +21,7 @@ export default function CreateImageForm() {
     imgFile.setAttribute('src', image);
     imgFile.style.width = '100%';
     imgFile.style.height = '100%';
+    file.appendChild(imgFile);
   }
 
   return (
