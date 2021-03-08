@@ -10,19 +10,23 @@ export default function CreateImageForm() {
   const handleImgLinkForm = (e) => {
     e.preventDefault();
   }
+  const ref = React.createRef();
 
   const handleImgFile = (e) => {
     e.preventDefault();
     const image = e.target.files[0];
     console.log(e.target.files[0]);
     setWhichImgForm('ImgFile');
-    let file = document.getElementsByClassName('ImgFileUpload');
+    let file = document.getElementById('pita');
     let imgFile = document.createElement('img');
     imgFile.setAttribute('src', image);
     imgFile.style.width = '100%';
     imgFile.style.height = '100%';
-    file.appendChild(imgFile);
+    console.log('file', file);
+    console.log('ref', ref);
+    ref.appendChild(imgFile);
   }
+
 
   return (
     <div className='imgModal'>
@@ -40,7 +44,7 @@ export default function CreateImageForm() {
         </div>
       </> : null }
       {whichImgForm === 'ImgFile'?
-        <div className='ImgFileUpload'></div>
+        <div className='ImgFileUpload' id='pita' ref={ref}></div>
       : null}
     </div>
   )
