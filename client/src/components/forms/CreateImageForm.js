@@ -14,17 +14,17 @@ export default function CreateImageForm() {
 
   const handleImgFile = (e) => {
     e.preventDefault();
-    const image = e.target.files[0];
-    console.log(e.target.files[0]);
-    setWhichImgForm('ImgFile');
+    const image = e.currentTarget.files['0'];
+    console.log('image', e.currentTarget.files['0']);
+    // setWhichImgForm('ImgFile');
     let file = document.getElementById('pita');
     let imgFile = document.createElement('img');
-    imgFile.setAttribute('src', image);
-    imgFile.style.width = '100%';
-    imgFile.style.height = '100%';
+    imgFile.setAttribute('src', image.name);
+    // imgFile.style.width = '100%';
+    // imgFile.style.height = '100%';
     console.log('file', file);
-    console.log('ref', ref);
-    ref.appendChild(imgFile);
+    // console.log('ref', ref);
+    // file.appendChild(imgFile);
   }
 
 
