@@ -1,5 +1,5 @@
 # Welcome to Fumblr!!!!!
-     First Solo Full Stack Project cloning Tumblr aliased as Fumblr
+  >First Solo Full Stack Project cloning Tumblr aliased as Fumblr
 
 
 ## References and Technologies Used:
