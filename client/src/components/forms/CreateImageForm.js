@@ -6,7 +6,8 @@ import CameraFormIcon from '../icons/CameraFormIcon';
 import CameraIcon from '../icons/CameraIcon';
 
 export default function CreateImageForm() {
-  let [whichImgForm, setWhichImgForm] = useState('main')
+  let [whichImgForm, setWhichImgForm] = useState('main');
+  let [image, setImage] = useState('')
   const handleImgLinkForm = (e) => {
     e.preventDefault();
   }
@@ -14,15 +15,19 @@ export default function CreateImageForm() {
 
   const handleImgFile = (e) => {
     e.preventDefault();
-    const image = e.currentTarget.files['0'];
+    // const image = e.currentTarget.files['0'];
+    const image = e.target.value;
     console.log('image', e.currentTarget.files['0']);
-    // setWhichImgForm('ImgFile');
-    let file = document.getElementById('pita');
-    let imgFile = document.createElement('img');
-    imgFile.setAttribute('src', image.name);
+    setWhichImgForm('ImgFile');
+    setImage(image.name);
+    console.log('e.target', e.target);
+    console.log('e.target.value', e.target.value);
+    // let file = document.getElementById('pita');
+    // let imgFile = document.createElement('img');
+    // imgFile.setAttribute('src', image.name);
     // imgFile.style.width = '100%';
     // imgFile.style.height = '100%';
-    console.log('file', file);
+    // console.log('file', file);
     // console.log('ref', ref);
     // file.appendChild(imgFile);
   }
@@ -43,9 +48,10 @@ export default function CreateImageForm() {
           <ImgLinkIcon />
         </div>
       </> : null }
-      {whichImgForm === 'ImgFile'?
+      {/* {whichImgForm === 'ImgFile'?
         <div className='ImgFileUpload' id='pita' ref={ref}></div>
-      : null}
+      : null} */}
+      <div><img src={whichImgForm === 'ImgFile'? image : null } /></div>
     </div>
   )
 }
