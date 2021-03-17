@@ -3,7 +3,7 @@ import '../../assets/css/modals.css';
 import ImgLinkIcon from '../icons/ImgLinkIcon';
 
 import CameraFormIcon from '../icons/CameraFormIcon';
-import CameraIcon from '../icons/CameraIcon';
+// import CameraIcon from '../icons/CameraIcon';
 
 export default function CreateImageForm() {
   let [whichImgForm, setWhichImgForm] = useState('main');
@@ -15,43 +15,32 @@ export default function CreateImageForm() {
 
   const handleImgFile = (e) => {
     e.preventDefault();
-    // const image = e.currentTarget.files['0'];
-    const image = e.target.value;
+    const image = URL.createObjectURL(e.target.files[0])
     console.log('image', e.currentTarget.files['0']);
     setWhichImgForm('ImgFile');
-    setImage(image.name);
+    setImage(image);
     console.log('e.target', e.target);
     console.log('e.target.value', e.target.value);
-    // let file = document.getElementById('pita');
-    // let imgFile = document.createElement('img');
-    // imgFile.setAttribute('src', image.name);
-    // imgFile.style.width = '100%';
-    // imgFile.style.height = '100%';
-    // console.log('file', file);
-    // console.log('ref', ref);
-    // file.appendChild(imgFile);
+    console.log('image', image)
   }
 
 
   return (
-    <div className='imgModal'>
+    <>
       {whichImgForm === 'main'?
-      <>
-        <div className='imgFile'>
-          <label className='fileContainer'>
-            <input type='file' accept='image/*' className='imgUpload' onChange={handleImgFile}>
-            </input>
-              <CameraFormIcon className='imgFormIcon'/>
-          </label>
-        </div>
-        <div className='imgLink' onClick={handleImgLinkForm}>
-          <ImgLinkIcon />
-        </div>
-      </> : null }
-      {/* {whichImgForm === 'ImgFile'?
-        <div className='ImgFileUpload' id='pita' ref={ref}></div>
-      : null} */}
-      <div><img src={whichImgForm === 'ImgFile'? image : null } /></div>
-    </div>
+        <div className='imgModal'>
+            <div className='imgFile'>
+              <label className='fileContainer'>
+                <input type='file' accept='image/*' className='imgUpload' onChange={handleImgFile}>
+                </input>
+                  <CameraFormIcon className='imgFormIcon'/>
+              </label>
+            </div>
+            <div className='imgLink' onClick={handleImgLinkForm}>
+              <ImgLinkIcon />
+            </div>
+        </div> :
+        <div><img className={whichImgForm === 'ImgFile'? 'imgFile' : null } src={whichImgForm === 'ImgFile'? image : null } /></div> }
+    </>
   )
 }

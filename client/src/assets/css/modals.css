@@ -83,3 +83,8 @@ g.imgFormIcon {
   animation-fill-mode: none;
   opacity: 1;
 }
+
+.imgFile {
+  height: 100%;
+  width: 100%;
+}
