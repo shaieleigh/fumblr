@@ -2,11 +2,19 @@ import Cookies from 'js-cookie';
 
 const CREATE_TEXT = 'CREATE_TEXT';
 const CREATE_TEXT_TITLE = 'CREATE_TEXT_TITLE';
-// const CREATE_IMAGE = 'CREATE_IMAGE';
+const CREATE_IMAGE = 'CREATE_IMAGE';
 
 const initialState = {
   title: '',
-  text: ''
+  text: '',
+  image: '',
+}
+
+export const createImageBlog = (image) => {
+  return {
+    type: CREATE_IMAGE,
+    image: image
+  }
 }
 
 export const createTextBlog = (textBlog) => {
@@ -27,15 +35,31 @@ export const createBlogGeneral = async(blog) => {
   console.log('blog inside createBlogGeneral', blog);
   console.log('token', Cookies.get('XSRF-TOKEN'))
   let post = blog.blog;
-  let userId = blog.userId
-  const res = await fetch('/api/blogs/text', {
-    method: "POST",
-    headers: {
-      'Content-Type': 'application/json',
-      'XSRF-TOKEN': Cookies.get('XSRF-TOKEN')
-    },
-    body: JSON.stringify({ post, userId })
-  })
+  let userId = blog.userId;
+  let res;
+  console.log('%cpost.image', 'color:blue;', post.image);
+  if(post.image){
+    const formData = new FormData()
+    formData.append('file', post.image);
+    formData.append('userId', userId);
+    console.log(formData);
+    res = await fetch('/api/blogs/image', {
+      method: 'POST',
+      headers: {
+        'XSRF-TOKEN': Cookies.get('XSRF-TOKEN')
+      },
+      body: formData
+    })
+  } else {
+    res = await fetch('/api/blogs/text', {
+      method: "POST",
+      headers: {
+        'Content-Type': 'application/json',
+        'XSRF-TOKEN': Cookies.get('XSRF-TOKEN')
+      },
+      body: JSON.stringify({ post, userId })
+    })
+  }
   if(!res.ok){
     console.error(res);
   }
@@ -51,6 +75,9 @@ export default function createBlog(state=initialState, action) {
       return state;
     case CREATE_TEXT_TITLE:
       state['title'] = action.textBlogTitle.title;
+      return state;
+    case CREATE_IMAGE:
+      state['image'] = action.image;
       return state;
     default:
       return state;

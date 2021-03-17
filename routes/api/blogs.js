@@ -39,6 +39,13 @@ router.post('/text', async function (req, res, next) {
     title: textBody.title
   });
   console.log('createdBlogs', createdBlog);
+});
+
+router.post('/image', singleMulterUpload('image'), async function (req, res, next) {
+  console.log('req.body', req.body);
+  console.log('req.body.file', req.body.file);
+  const userData = req.body;
+  userData.image = await singlePrivateFileUpload(req.body.file);
 })
 
 

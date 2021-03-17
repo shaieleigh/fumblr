@@ -9,7 +9,7 @@ import CreateLinkForm from './forms/CreateLinkForm';
 import CreateVideoForm from './forms/CreateVideoForm';
 import CreateChatForm from './forms/CreateChatForm';
 import CreateAudioForm from './forms/CreateAudioForm';
-import { createBlogGeneral } from '../store/createBlogs';
+import { createBlogGeneral, createTextBlog, createTextTitleBlog, createImageBlog } from '../store/createBlogs';
 
 export default function CreateModal() {
   const dispatch = useDispatch();
@@ -29,6 +29,9 @@ export default function CreateModal() {
   const handleHideModal = (e) => {
     e.preventDefault();
     dispatch(setCreateModal('none'));
+    dispatch(createImageBlog(''));
+    dispatch(createTextTitleBlog(''));
+    dispatch(createTextBlog(''));
 
     document.body.style.overflow = 'scroll';
   }
@@ -38,7 +41,14 @@ export default function CreateModal() {
       console.log('blog', blog);
       createBlogGeneral({blog, userId})
     }
-    }
+    dispatch(setCreateModal('none'));
+    // dispatch(createImageBlog(''));
+    // dispatch(createTextTitleBlog(''));
+    // dispatch(createTextBlog(''));
+    document.body.style.overflow = 'scroll';
+
+  }
+
   console.log('create Modal', createModal);
   return (
     <div className='positionedModal'>

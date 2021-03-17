@@ -1,24 +1,31 @@
 import React, { useState } from 'react';
-import '../../assets/css/modals.css';
-import ImgLinkIcon from '../icons/ImgLinkIcon';
+import { useDispatch } from 'react-redux';
 
+import { createImageBlog } from '../../store/createBlogs';
+import ImgLinkIcon from '../icons/ImgLinkIcon';
 import CameraFormIcon from '../icons/CameraFormIcon';
+import '../../assets/css/modals.css';
+
 // import CameraIcon from '../icons/CameraIcon';
 
 export default function CreateImageForm() {
+  const dispatch = useDispatch();
   let [whichImgForm, setWhichImgForm] = useState('main');
-  let [image, setImage] = useState('')
+  let [image, setImage] = useState('');
+
   const handleImgLinkForm = (e) => {
     e.preventDefault();
   }
-  const ref = React.createRef();
+  // const ref = React.createRef();
 
   const handleImgFile = (e) => {
     e.preventDefault();
-    const image = URL.createObjectURL(e.target.files[0])
-    console.log('image', e.currentTarget.files['0']);
+    const image = URL.createObjectURL(e.target.files[0]);
+    const imagePost = e.currentTarget.files[0]
+    console.log('e.currentTarget.files[0]', e.currentTarget.files[0]);
     setWhichImgForm('ImgFile');
     setImage(image);
+    dispatch(createImageBlog(imagePost));
     console.log('e.target', e.target);
     console.log('e.target.value', e.target.value);
     console.log('image', image)
