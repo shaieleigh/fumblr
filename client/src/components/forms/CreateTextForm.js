@@ -16,7 +16,6 @@ export default function CreateTextForm() {
     e.preventDefault();
     let html = e.target.innerHTML;
     dispatch(createTextBlog({text: html}));
-
   }
 
   return (

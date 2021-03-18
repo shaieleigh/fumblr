@@ -38,7 +38,7 @@ export default function CreateImageForm() {
         <div className='imgModal'>
             <div className='imgFile'>
               <label className='fileContainer'>
-                <input type='file' accept='image/*' className='imgUpload' onChange={handleImgFile}>
+                <input type='file' accept='image/*' className='imgUpload' onChange={handleImgFile} name='image'>
                 </input>
                   <CameraFormIcon className='imgFormIcon'/>
               </label>

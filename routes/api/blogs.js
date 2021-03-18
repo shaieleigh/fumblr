@@ -28,10 +28,8 @@ router.post('/text', async function (req, res, next) {
   // textBody.mediaUrl = await singlePublicFileUpload(req.file);
   // console.log('textBody.mediaUrl', textBody.mediaUrl);
   console.log('textBody', textBody);
-
-
-
   console.log('user', req.body.userId)
+
   const createdBlog =  await Blogs.create({
     blog: textBody.text,
     blogType: 'text',
@@ -41,11 +39,12 @@ router.post('/text', async function (req, res, next) {
   console.log('createdBlogs', createdBlog);
 });
 
-router.post('/image', singleMulterUpload('image'), async function (req, res, next) {
+router.post('/image', async function (req, res, next) {
   console.log('req.body', req.body);
   console.log('req.body.file', req.body.file);
   const userData = req.body;
   userData.image = await singlePrivateFileUpload(req.body.file);
+  consol.log('userData.image', 'color:blue;font-size:15px');
 })
 
 
