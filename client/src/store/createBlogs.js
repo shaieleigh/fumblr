@@ -33,22 +33,29 @@ export const createTextTitleBlog = (textBlogTitle) => {
 
 export const createBlogGeneral = async(blog) => {
   console.log('blog inside createBlogGeneral', blog);
-  console.log('token', Cookies.get('XSRF-TOKEN'))
+  console.log('token', Cookies.get('XSRF-TOKEN'));
+
   let post = blog.blog;
   let userId = blog.userId;
+  let image = post.image;
+  for (var [key, value] of image.entries()) {
+      console.log('key, value', key, value);
+    }
+  // let image2 = image.image;
+  console.log('image', image);
   let res;
   console.log('%cpost.image', 'color:blue;', post.image);
   if(post.image){
-    const formData = new FormData()
-    formData.append('file', post.image);
-    formData.append('userId', userId);
-    console.log(formData);
     res = await fetch('/api/blogs/image', {
       method: 'POST',
       headers: {
-        'XSRF-TOKEN': Cookies.get('XSRF-TOKEN')
+        'XSRF-TOKEN': Cookies.get('XSRF-TOKEN'),
+        // "Content-Type" : "multipart/form-data"
+        // 'Content-Type': 'application/json',
+        // 'Accept': 'application/json'
       },
-      body: formData
+      // body: JSON.stringify({image, userId})
+      body: image
     })
   } else {
     res = await fetch('/api/blogs/text', {

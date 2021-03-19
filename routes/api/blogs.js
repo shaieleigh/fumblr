@@ -39,12 +39,22 @@ router.post('/text', async function (req, res, next) {
   console.log('createdBlogs', createdBlog);
 });
 
-router.post('/image', async function (req, res, next) {
+router.post('/image', singleMulterUpload('upl'), async function (req, res, next) {
   console.log('req.body', req.body);
-  console.log('req.body.file', req.body.file);
+  console.log('req.body.image', req.body.image);
+  console.log('req.file', req.file);
   const userData = req.body;
-  userData.image = await singlePrivateFileUpload(req.body.file);
-  consol.log('userData.image', 'color:blue;font-size:15px');
+  let body = req.body.image;
+  // let image = body.slice(5);
+  // console.log('image in post', image);
+  // console.log('req', req)
+  console.log('req.Blob', req.Blob);
+  console.log('req.data', req.data);
+
+
+  userData.image = await singlePrivateFileUpload(req.file);
+  console.log('userData.image', 'color:blue;font-size:15px', userData.image);
+  return userData.image;
 })
 
 
