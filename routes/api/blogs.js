@@ -45,15 +45,13 @@ router.post('/image', singleMulterUpload('upl'), async function (req, res, next)
   console.log('req.file', req.file);
   const userData = req.body;
   let body = req.body.image;
-  // let image = body.slice(5);
-  // console.log('image in post', image);
-  // console.log('req', req)
+
   console.log('req.Blob', req.Blob);
   console.log('req.data', req.data);
-
-
+  // retrievePrivateFile,
+  let imageToCreate = retrievePrivateFile(user.image);
   userData.image = await singlePrivateFileUpload(req.file);
-  console.log('userData.image', 'color:blue;font-size:15px', userData.image);
+  console.log('userData.image', userData.image);
   return userData.image;
 })
 
