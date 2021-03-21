@@ -15,8 +15,6 @@ import VideoIcon from './icons/VideoIcon.js';
 
 export default function BlogScroll() {
 
-
-
   return (
     <div className='blogScroll'>
       <div className='profPicDBScroll'>

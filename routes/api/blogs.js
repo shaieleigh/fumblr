@@ -21,14 +21,7 @@ const { s3,
 const router = express.Router();
 
 router.post('/text', async function (req, res, next) {
-  console.log('req', req.body);
-  console.log('req.body', req.body);
   const textBody = req.body.post;
-  // console.log('req.file', req.file);
-  // textBody.mediaUrl = await singlePublicFileUpload(req.file);
-  // console.log('textBody.mediaUrl', textBody.mediaUrl);
-  console.log('textBody', textBody);
-  console.log('user', req.body.userId)
 
   const createdBlog =  await Blogs.create({
     blog: textBody.text,
@@ -40,19 +33,21 @@ router.post('/text', async function (req, res, next) {
 });
 
 router.post('/image', singleMulterUpload('upl'), async function (req, res, next) {
-  console.log('req.body', req.body);
+  console.log('req.body.userId', req.body.userId);
   console.log('req.body.image', req.body.image);
   console.log('req.file', req.file);
-  const userData = req.body;
-  let body = req.body.image;
+  let userData = req.body;
 
-  console.log('req.Blob', req.Blob);
-  console.log('req.data', req.data);
-  // retrievePrivateFile,
-  let imageToCreate = retrievePrivateFile(user.image);
-  userData.image = await singlePrivateFileUpload(req.file);
-  console.log('userData.image', userData.image);
-  return userData.image;
+  let image = await singlePublicFileUpload(req.file);
+  console.log('\x1b[36m%s\x1b[0m', 'image', image);
+
+  const createdBlog =  await Blogs.create({
+    blog: image,
+    blogType: 'image',
+    userId: req.body.userId,
+  });
+  console.log('\x1b[36m%s\x1b[0m', 'createdBlog', createdBlog);
+  return createdBlog;
 })
 
 

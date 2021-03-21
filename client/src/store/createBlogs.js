@@ -37,24 +37,17 @@ export const createBlogGeneral = async(blog) => {
 
   let post = blog.blog;
   let userId = blog.userId;
-  let image = post.image;
-  for (var [key, value] of image.entries()) {
-      console.log('key, value', key, value);
-    }
-  // let image2 = image.image;
-  console.log('image', image);
+
   let res;
   console.log('%cpost.image', 'color:blue;', post.image);
   if(post.image){
+    let image = post.image;
+    console.log('image', image);
     res = await fetch('/api/blogs/image', {
       method: 'POST',
       headers: {
         'XSRF-TOKEN': Cookies.get('XSRF-TOKEN'),
-        // "Content-Type" : "multipart/form-data"
-        // 'Content-Type': 'application/json',
-        // 'Accept': 'application/json'
       },
-      // body: JSON.stringify({image, userId})
       body: image
     })
   } else {

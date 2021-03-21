@@ -25,22 +25,18 @@ export default function CreateImageForm() {
     const imagePost = e.currentTarget.files[0]
     console.log('e.currentTarget.files[0]', e.currentTarget.files[0]);
     const allowedFileTypes = ['image/png', 'image/jpeg', 'image/gif'];
-   console.log('image', image);
-   let imageBlob;
-   console.log('allowedFileType', allowedFileTypes.indexOf(imagePost.type))
-   if(allowedFileTypes.indexOf(imagePost.type) > -1){
-     imageBlob = new Blob([JSON.stringify(image)], {type: 'image/png'});
-   }
-
-  let data = new FormData();
-  console.log('MYBLOB', imageBlob);
-  data.append('upl', imagePost, imagePost.name);
-    // data.set('data', e.target.value);
-    // data.append('file', image);
-    // data.append('userId', userId);
-    for (var [key, value] of data.entries()) {
-      console.log('key, value', key, value);
+    console.log('image', image);
+    let imageBlob;
+    console.log('allowedFileType', allowedFileTypes.indexOf(imagePost.type))
+    if(allowedFileTypes.indexOf(imagePost.type) > -1){
+      imageBlob = new Blob([JSON.stringify(image)], {type: 'image/png'});
     }
+
+    let data = new FormData();
+    console.log('MYBLOB', imageBlob);
+    data.append('upl', imagePost, imagePost.name);
+    data.append('userId', userId);
+
     console.log('data', data);
     console.log('data.entries()', data.entries());
     setWhichImgForm('ImgFile');

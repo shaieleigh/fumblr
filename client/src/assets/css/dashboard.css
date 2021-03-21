@@ -349,3 +349,8 @@ div.blogScroll {
 .black {
   color: black;
 }
+
+.blogsImages {
+  height: 100%;
+  width: 100%;
+}
