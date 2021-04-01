@@ -17,6 +17,7 @@ export default function Dashboard() {
   const dispatch = useDispatch();
   const currentUserId = useSelector(state => state.auth.id);
   const createModal = useSelector(state => state.createModalReducer.createModal);
+  let blogsList = useSelector(state => state.blogsList.allBlogs);
 
 
 
@@ -31,7 +32,7 @@ export default function Dashboard() {
       return data;
     }
     users();
-  });
+  }, [createModal]);
 
 
   if (!currentUserId) return <Redirect to='/login' />;

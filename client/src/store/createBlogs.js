@@ -33,16 +33,13 @@ export const createTextTitleBlog = (textBlogTitle) => {
 
 export const createBlogGeneral = async(blog) => {
   console.log('blog inside createBlogGeneral', blog);
-  console.log('token', Cookies.get('XSRF-TOKEN'));
 
   let post = blog.blog;
   let userId = blog.userId;
 
   let res;
-  console.log('%cpost.image', 'color:blue;', post.image);
   if(post.image){
     let image = post.image;
-    console.log('image', image);
     res = await fetch('/api/blogs/image', {
       method: 'POST',
       headers: {

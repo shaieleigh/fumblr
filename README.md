@@ -9,5 +9,8 @@
 
 ~ Used a code snippet for the color changing f: https://stackoverflow.com/questions/16782498/looping-animation-of-text-color-change-using-css3
 
+AWS S3 Bucket used to store data
+
+
 
 ## [Live Site](https://fumblrcloneapp.herokuapp.com/login)

@@ -31,7 +31,7 @@ export default function Blogs() {
     }
     setNewAllBlogs(blogs);
     }
-  }, [allBlogs, allUsers]);
+  }, [allBlogs]);
 
   // <img src="https://64.media.tumblr.com/avatar_2d50bfe6eb4c_128.pnj"></img>
 

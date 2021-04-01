@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+
 import { setCreateModal } from '../store/createModals';
-// import Cookies from 'js-cookie';
 import CreateTextForm from './forms/CreateTextForm';
 import CreateImageForm from './forms/CreateImageForm';
 import CreateQuoteForm from './forms/CreateQuoteForm';
@@ -42,14 +42,11 @@ export default function CreateModal() {
       createBlogGeneral({blog, userId})
     }
     dispatch(setCreateModal('none'));
-    // dispatch(createImageBlog(''));
-    // dispatch(createTextTitleBlog(''));
-    // dispatch(createTextBlog(''));
+
     document.body.style.overflow = 'scroll';
 
   }
 
-  console.log('create Modal', createModal);
   return (
     <div className='positionedModal'>
       <div className='createBlogs' onClick={handleHideModal}></div>

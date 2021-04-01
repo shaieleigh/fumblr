@@ -26,25 +26,16 @@ export default function CreateImageForm() {
     console.log('e.currentTarget.files[0]', e.currentTarget.files[0]);
     const allowedFileTypes = ['image/png', 'image/jpeg', 'image/gif'];
     console.log('image', image);
-    let imageBlob;
     console.log('allowedFileType', allowedFileTypes.indexOf(imagePost.type))
-    if(allowedFileTypes.indexOf(imagePost.type) > -1){
-      imageBlob = new Blob([JSON.stringify(image)], {type: 'image/png'});
-    }
 
     let data = new FormData();
-    console.log('MYBLOB', imageBlob);
     data.append('upl', imagePost, imagePost.name);
     data.append('userId', userId);
 
-    console.log('data', data);
-    console.log('data.entries()', data.entries());
     setWhichImgForm('ImgFile');
     setImage(image);
     dispatch(createImageBlog(data));
-    console.log('e.target', e.target);
-    console.log('e.target.value', e.target.value);
-    console.log('image', image);
+
   }
 
 
